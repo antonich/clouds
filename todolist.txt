@@ -29,3 +29,4 @@
 + stepy pododawac ikonki;
 - olney font dodac do sekcji;
 - w galerii zamienic na img -> svg i teksty rozne;
+- przyciski left nav dodaja styl do zdjecia;
