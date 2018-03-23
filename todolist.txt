@@ -1,0 +1,30 @@
++ zmienic animation gallery ikonki i tekst;
+
++ przyciski przewjania na tej samej szerokosci co i gallery;
+
++ oferty pracy na pomaranczowo z transition;
+
++ dodac plynnosci do background;
+
+- zabrac canvas i zrobic na 2 warstwy z tekstem i 3 w stepach;
+
++ stepy bez linii;
+
++ scroll przerzuca przy +-30%;
+
+- z-index =2 tla czawny; nie jest mozliwe chyba 4 rysunki
+
++ scroll down zabrac po pierwszej panel;
+
++ canvas dla stepow;
+
+- sprobowac zrobic slide down z fullpage;
+- linki na menu;
+- 1 z 3 na loader;
+- dodac 2 planety;
+- menu dodac background z gwizdkami;
+- caly kontakt panel;
+- dodac serwer;
+- sprawdzic dodawanie z serwera nowych wakancji;
+- stepy pododawac ikonki;
+- olney font dodac do sekcji;

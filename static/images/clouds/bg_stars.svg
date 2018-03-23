@@ -7,20 +7,12 @@
     #bg1 {
     	background-color: black;
 		opacity: 0.3;
-		transition: .1s ease-in-out;
+		transition: .5s ease-in-out;
     }
     #bg1 circle {
       fill: white;
     }
 
-    #bg1.bg1-changed {
-    	background-color: #ff5719;
-    	opacity: 0.4;
-    }
-
-    #bg1.bg1-changed circle {
-    	fill: black;
-    }
     /* ]]> */
   </style>
 <g>

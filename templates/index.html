@@ -522,7 +522,7 @@
 									<div class="val-text-cont">
 										<div class="return"><i class="back"></i></div>
 										<h2>AZURE EXPLORER</h2>
-										<div class="val-text-info">
+										<div class="val-text-info" id="val-info">
 											<h4>WE ARE LOOKING FOR:</h4>
 											<p>ID is 1;BI EXPLORER  What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 											</p>
@@ -716,7 +716,7 @@
 
 			var sel;
 			$('.values ul > li').click(function() {
-				console.log($(this).attr('id'));
+				// console.log($(this).attr('id'));
 				// console.log($('.values .val-desc > #' + $(this).attr('id')));
 				sel = `div[id="${$(this).attr('id')}"]`;
 
@@ -753,8 +753,8 @@
 			  // span.attr("style", "transform: translateX("+(-ax)+"px);")
 			  // text.attr("style", "transform: translateX("+(-ax)+"px);")
 			  TweenMax.to('.bg1', 1.2, {
-			    x: ax * 2,
-			    y: ay * 2,
+			    x: ax,
+			    y: ay,
 			  });
 			  TweenMax.to('#step1-plx', 0.7, {transform:"rotateX("+(-ay/2)+"deg) rotateY("+(ax/2)+"deg)"});
 			});
@@ -788,6 +788,7 @@
 					//Navigation
 					menu: '#left-nav',
 					easingcss3: 'cubic-bezier(1.000, -0.440, 0.265, 1.385)',
+					scrollingSpeed: 800,
 
 	
 					afterLoad: function(anchorLink, index){
@@ -810,26 +811,40 @@
 			                // add class to style fixed section
 				                $("#container").addClass('value-active');
 				                $("body").css('background-color', "#ff5719");
-							}, 0); // change to 100	
+							}, 0); // change to 100
+						}
+
+						if(index > 5) {
+							$('#step1-plx').css('transform', 'rotateX(-20deg) rotateY(10deg)');
 						}
 					},
 					onLeave: function(index, nextIndex, direction) {
+
+						console.log($('#val-info'));
+						if($('#val-info:hover').length === 1) {
+							console.log('element is hovered');
+							return false;
+						}
+						
 						var leavingSection = $(this);
 						var imgClass = $('#bg1').attr('class');
 
 						//using index to change background styles for 3rd section
 						if(index == 3){
-			                $("body").css('background-color', "black");
-			                if(typeof imgClass !== 'undefined') {
-			                    $('#bg1').attr("class", "");
-			                    // should be add svg and replaced-svg
-			                }
-			                $("#container").removeClass('value-active');
+							setTimeout(function(){
+				                $("body").css('background-color', "black");
+				                if(typeof imgClass !== 'undefined') {
+				                    $('#bg1').attr("class", "");
+				                    // should be add svg and replaced-svg
+				                }
+				                $("#container").removeClass('value-active');
+							}, 0);
 
 						} else if(index==2 && direction == 'down') {
 							setTimeout(function(){
 				                if(typeof imgClass !== 'undefined') {
 				                    $('#bg1').attr('class', imgClass+' bg1-changed');
+				                    // console.log($('#bg1 circle').css('fill', 'green'));
 				                }
 			                	// add class to style fixed section
 				                $("#container").addClass('value-active');
@@ -846,11 +861,7 @@
 				                $("body").css('background-color', "#ff5719");
 							}, 500); // change to 100
 						}
-					},
-					afterLoad: function(anchorLink, index){
-						if(index > 5) {
-							$('#step1-plx').css('transform', 'rotateX(-20deg) rotateY(10deg)');
-						}
+
 					}
 
 				});
@@ -859,6 +870,10 @@
 					$.fn.fullpage.moveSectionDown();
 				});
 
+			});
+
+			$("#val-info").hover(function() {
+				console.log('siemka');
 			});
 
 		</script>

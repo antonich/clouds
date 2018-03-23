@@ -22,6 +22,7 @@
 body {
 	background-color: #1b1b19;
 	background-color: black;
+	transition: background-color 0s ease-in-out;
 	/*background-image: url('../images/clouds/bg_stars.svg');*/
 }
 
@@ -492,10 +493,6 @@ div.gal-item p {
 
 .value-active .val-content ul > li:hover {
 	color: white;
-}
-
-.value .val-desc {
-	position: relative;
 }
 
 .val-desc .val-text {
