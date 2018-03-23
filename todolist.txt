@@ -18,13 +18,14 @@
 
 + canvas dla stepow;
 
-- sprobowac zrobic slide down z fullpage;
++ sprobowac zrobic slide down z fullpage;
 - linki na menu;
 - 1 z 3 na loader;
 - dodac 2 planety;
-- menu dodac background z gwizdkami;
++ menu dodac background z gwizdkami;
 - caly kontakt panel;
 - dodac serwer;
 - sprawdzic dodawanie z serwera nowych wakancji;
-- stepy pododawac ikonki;
++ stepy pododawac ikonki;
 - olney font dodac do sekcji;
+- w galerii zamienic na img -> svg i teksty rozne;
