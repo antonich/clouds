@@ -38,4 +38,4 @@ Kontakt:
 + scroll down na koncu pokazuje wgore;
 + linki w menu;
 + zamyka sie po nacisnieciu;
-- dodac hover na buttony;
++ dodac hover na buttony;
