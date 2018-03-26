@@ -8,31 +8,8 @@
 		.st2{fill:#BDBEC1;}
 		.st3{fill:#F15728;}
 		.st4{fill: blue;}
+		.st100 {opacity: 1; z-index:100;}
 	</style>
-	<g>
-		<circle fill="transparent" id="left_line" stroke="#BDBEC1" r="320" cx="320" stroke-width="2" cy="320" />
-	</g>
-	<g>
-		<circle fill="transparent" id="right_line" stroke="#BDBEC1" r="75" cx="1101" stroke-width="2" cy="322" class="st10" />
-	</g>
-	<g>
-		<circle id = "left_planet" cx="100" cy="90" r="12" stroke="grey" stroke-width="3" fill="grey" />
-	</g>
-	<g>
-		<circle id = "small_planet" cx="1100" cy="247" r="2" stroke="#ff5917" stroke-width="3" fill="#ff5917" />
-	</g>
-	<g>
-		<circle id = "small_planet2" cx="1100" cy="278" r="2" stroke="#ff5917" stroke-width="3" fill="#ff5917" />
-	</g>
-	<g>
-		<circle id = "small_planet3" cx="1100" cy="101" r="2" stroke="#ff5917" stroke-width="3" fill="#ff5917" />
-	</g>
-	<g>
-		<circle fill="transparent" id="right_line2" stroke="#BDBEC1" r="43" cx="1101" stroke-width="2" cy="321" class="st10" />
-	</g>
-	<g>
-		<circle fill="transparent" id="right_line3" stroke="#BDBEC1" r="220" cx="1101" stroke-width="2" cy="321" class="st10" />
-	</g>
 	<g>
 		<g class="st10">
 			<g>
@@ -220,6 +197,33 @@
 			<path class="st3" d="M1127.6,317.4c2.3,14.9-7.9,28.9-22.8,31.2c-14.9,2.3-28.9-7.9-31.2-22.8c-2.3-14.9,7.9-28.9,22.8-31.2
 				C1111.3,292.3,1125.3,302.5,1127.6,317.4z"/>
 		</g>
+	</g>
+
+
+	<g>
+		<circle fill="transparent" id="left_line" stroke="#BDBEC1" r="320" cx="320" stroke-width="2" cy="320" />
+	</g>
+	<g>
+		<circle fill="transparent" id="right_line" stroke="#BDBEC1" r="75" cx="1101" stroke-width="2" cy="322" class="st10" />
+	</g>
+	<g>
+		<circle fill="transparent" id="right_line2" stroke="#BDBEC1" r="43" cx="1101" stroke-width="2" cy="321" class="st10" />
+	</g>
+	<g>
+		<circle fill="transparent" id="right_line3" stroke="#BDBEC1" r="220" cx="1101" stroke-width="2" cy="321" class="st10" />
+	</g>
+
+	<g class="st100">
+		<circle class="st100" id = "left_planet" cx="100" cy="90" r="12" stroke="grey" stroke-width="3" fill="grey" />
+	</g>
+	<g class="st100">
+		<circle id = "small_planet" cx="1100" cy="247" r="2" stroke="#ff5917" stroke-width="3" fill="#ff5917" />
+	</g>
+	<g class="st100">
+		<circle id = "small_planet2" cx="1100" cy="278" r="2" stroke="#ff5917" stroke-width="3" fill="#ff5917" />
+	</g>
+	<g class="st100">
+		<circle id = "small_planet3" cx="1100" cy="101" r="2" stroke="#ff5917" stroke-width="3" fill="#ff5917" />
 	</g>
 
 </svg>

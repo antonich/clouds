@@ -157,6 +157,7 @@ body {
 .home-loaded .home-nav {
 	visibility: visible;
 	opacity: 1;
+	transform-style: preserve-3d;
 }
 
 .home .home-nav > div:not(.home-back) {
@@ -202,6 +203,11 @@ body {
 	transform: translate(-50%, -50%);
 	padding: 10px;
 	transition: opacity .6s ease-in-out;
+}
+
+.home-back ~ div {
+	z-index: 1000 !important;
+	transform: translateZ(1000px);
 }
 
 
@@ -288,8 +294,8 @@ body {
 
 .gal-items > div.gal-item p {
 	position: absolute;
-	bottom: 5px;
-	left: 5%;
+	bottom: -5px;
+	left: 10%;
 	width: 120%;
 	font-size: 10px;
 	color: #717171;
@@ -313,10 +319,10 @@ div.gal-item p {
 }
 
 .gal-center svg {
-	/*transition: height .1s;*/
+	transition:	.2s ease-in-out;
 	/*transition-timing-function: cubic-bezier(0.1, 0, 1.0, .9);*/
-/*	width: 200px;
-	height: 220px;*/
+	width: 180px;
+	height: 200px;
 }
 
 .gal-center svg .st0 {
@@ -325,6 +331,11 @@ div.gal-item p {
 
 .gal-even .st0 {
 	fill: #717171;
+}
+
+.gal-even {
+	width: 150px !important;
+	height: 160px !important;
 }
 
 /*.gal-center {
@@ -369,6 +380,7 @@ div.gal-item p {
   /*transition: 3s ease;*/
   text-align: center;
   z-index: 200;
+  transform-style: preserve-3d;
 }
 
 .gal-content .slider {
@@ -381,7 +393,7 @@ div.gal-item p {
 
 	transform: translate(-200%, 0);
 	transition-timing-function: cubic-bezier(0.1, 0, 1.0, .9);
-
+	transform-style: preserve-3d;
 }
 
 .slider.activeSlide {
@@ -400,6 +412,7 @@ div.gal-item p {
 .gal-content .slider p {
 	padding: 0 85px;
 	text-align: center;
+	transform: translateZ(50px);
 }
 
 .gal-content i {
@@ -544,6 +557,7 @@ div.gal-item p {
 .val-jobs .jobs-sections {
 	display: flex;
 	position: absolute;
+	/*width: 100%;*/
 	top: -100%;
 	transition: .3s ease-in-out;
 }
@@ -778,13 +792,13 @@ div.gal-item p {
 	position: relative;
 	/*border: 1px solid blue;*/
 	transform-style: preserve-3d;
-	/*transform: rotateX(-20deg) rotateY(10deg);*/
+	transform: rotateX(-20deg) rotateY(10deg);
 }
 
 .step1-desc-wrapper {
 	position: absolute;
-	width: 70%;
-	height: 58%;
+	width: 85%;
+	height: 70%;
 	margin: 0 auto;
 	left: 50%;
 	top: 10px;
@@ -800,7 +814,7 @@ div.gal-item p {
 
 .step1-inner .step-desc {
 	position: absolute;
-	bottom: -165px;
+	bottom: -145px;
 	left: 50%;
 	transform: translateX(-10%);
 	width: 100%;
@@ -810,7 +824,7 @@ div.gal-item p {
 
 .step-desc h1 {
 	letter-spacing: 2px;
-	font-size: 1.7em;
+	font-size: 2.5em;
 	transform: translateZ(40px);
 }
 
@@ -822,6 +836,7 @@ div.gal-item p {
 }
 
 .step-desc span {
+	font-size: 16px;
 	text-align: center;
 	display: block;
 	width: 100%;

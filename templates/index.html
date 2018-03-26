@@ -135,9 +135,9 @@
 							<img src="{% static 'images/clouds/view1back.svg' %}" class="svg" />
 						</div>
 						<!-- scroll on click with hash code -->
-						<div class="par"><a href="#section2" id="home-values">VALUES</a></div>
-						<div class="par"><a href="#section3" id="home-open">OPENINGS</a></div>
-						<div class="par"><a href="#section4" id="home-process">PROCESS</a></div>
+						<div class="step"><a href="#section2" id="home-values">VALUES</a></div>
+						<div class="step"><a href="#section3" id="home-open">OPENINGS</a></div>
+						<div class="step"><a href="#section4" id="home-process">PROCESS</a></div>
 					</div>
 				</section>
 
@@ -166,7 +166,7 @@
 								<p>LOVE YOUR CUSTOMER</p>
 							</div>
 						</div>
-						<div class="gal-content">
+						<div class="gal-content cont-par">
 							<div class="gal-btn">
 								<button id="prev"><i class="left"></i></button>
 								<button id="next"><i class="right"></i></button>
@@ -223,11 +223,6 @@
 										<li id="3">ASSISTANT SALES EXPLORER</li>
 										<li id="1">JUNIOR BI EXPLORER</li>
 									</ul>
-<!-- 									<ul class="val-col">
-										<li id="1">MASTER AI AND DEEP LEARNING EXPLORER</li>
-										<li id="3">ASSISTANT SALES EXPLORER</li>
-										<li id="1">BI EXPLORER</li>
-									</ul> -->
 								</div>
 							</div>
 						</div>
@@ -350,18 +345,18 @@
 					<div class="cont-content">
 						<div class="cont-par">
 							<div class="contact-us">
-								<h2>CONTACT US</h2>
-								<p class="cont-z0">Greate that you have passed by. Come more often! Follow us on Facebook and Linkendl - then you will get latest updates on our mission, the new searches for explorers and events we organize to celebrate with out fans.</p>
-								<div class="cont-info">
-									<h2 class="cont-z1">PL</h2>
-									<span class="cont-z1">Clouds on Mars Sp.z o.o.</span>
+								<h2 class="cont-z1">CONTACT US</h2>
+								<p class="cont-z1">Greate that you have passed by. Come more often! Follow us on Facebook and Linkendl - then you will get latest updates on our mission, the new searches for explorers and events we organize to celebrate with out fans.</p>
+								<div class="cont-info cont-z2">
+									<h2 >PL</h2>
+									<span>Clouds on Mars Sp.z o.o.</span>
 								</div>
 								<p class="cont-z2">Address: Zgoda 3/8, Warsaw</p>
 								<p class="cont-z2"><a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
 							</div>
 							<div class="follow-us">
-								<h2>FOLLOW US</h2>
-								<div class="cont-info-bottom">
+								<h2 class="cont-z1">FOLLOW US</h2>
+								<div class="cont-info-bottom cont-z2">
 									<div class="cont-info">
 										<h2 class="cont-z1">US</h2>
 										<span class="cont-z1">Clouds on Mars Inc.</span>
@@ -413,7 +408,14 @@
 		                }
 		                // Add replaced image's classes to the new SVG
 		                if(typeof imgClass !== 'undefined') {
-		                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+		                	// adding gal even class to make 2 and 4 element bigger
+							if (imgURL.indexOf("values2.svg") >= 0 || 
+								imgURL.indexOf("values4.svg") >= 0 ){
+			                    $svg = $svg.attr('class', imgClass+' replaced-svg gal-even');
+			                	console.log("images with values;")
+		                	} else {
+			                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+		                	}
 		                }
 
 		                // Remove any invalid XML tags as per http://validator.w3.org
@@ -434,7 +436,7 @@
 
 							//now call our Aimation at circle...
 							animateAtCircle(left_planet,left_line,50000, function(){console.log('finished');});
-							animateAtCircle(small_planet,right_line,5000, function(){console.log('finished');});
+							animateAtCircle(small_planet,right_line,15000, function(){console.log('finished');});
 							animateAtCircle(small_planet2,right_line2,20000, function(){console.log('finished');});
 							animateAtCircle(small_planet3,right_line3,35000, function(){console.log('finished');});
 		                }
@@ -634,14 +636,14 @@
 				                    // should be add svg and replaced-svg
 				                }
 
-							}, 200);
+							}, 100);
 			                $("body").css('background-color', "black");
 
 			                $("#container").removeClass('value-active');
 			                $('#bg-top').css('display', 'block');
 			                $(".menu-content").removeClass('menu-change3sec');
 
-						} else if(index==2 && direction == 'down') {
+						} //else if(index==2 && direction == 'down') {
 							// setTimeout(function(){
 				   //              if(typeof imgClass !== 'undefined') {
 				   //                  $('#bg1').attr('class', imgClass+' bg1-changed');
@@ -653,7 +655,7 @@
 				   //              $("body").css('background-color', "#ff5719");
 							// }, 1000); // change to 100
 
-						} else if(index==4 && direction == 'up') {
+						//} else if(index==4 && direction == 'up') {
 							// setTimeout(function(){
 				   //              if(typeof imgClass !== 'undefined') {
 				   //                  $('#bg1').attr('class', imgClass+' bg1-changed');
@@ -663,7 +665,7 @@
 				   //              $("#container").addClass('value-active');
 				   //              $("body").css('background-color', "#ff5719");
 							// }, 1000); // change to 100
-						}
+					//	}
 
 					}
 
@@ -734,7 +736,7 @@
 				var widthItems = $('.gal-items')[0].offsetWidth / 5;
 				var widthItem = $('.gal-item')[0].offsetWidth;
 				pos.push((index * widthItems) + widthItem/2);
-				if (index == 2) pos[index] = pos[index];
+				if (index == 2) pos[index] = pos[index] - 20;
 				return (pos[index] - 20);
 			});
 
@@ -788,7 +790,6 @@
 						}
 						$($(items[i]).context.childNodes[3]).css('display', 'none');
 						$($($('.gal-item > svg')[i])[0]).context.classList.remove('gal-even');
-
 					}
 					setTimeout(function(){
 						// last element with timeout to add transition

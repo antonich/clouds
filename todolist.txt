@@ -39,3 +39,19 @@ Kontakt:
 + linki w menu;
 + zamyka sie po nacisnieciu;
 + dodac hover na buttony;
+
++ Szary księżyc przy lewej planecie musi być na 100% opacity – teraz widać linie pod nim
+
++ Pomarańczowy środkowy księżyc po prawej stronie trochę za szybko się porusza, zwolnijmy go o jakieś 20%?
+
++ Pamiętaj o efekcie paralax na stronie głównej i tej z values
+
++ Mógłbyś zrobić większe ikony wartości? Myślę że można zrobić aktywną na środku i po jednej po każdej stronie – nie będzie widać od razu 5 ale przynajmniej będą większe
+
+-? Zacina się coś animacja przy przejściu na oferty pracy
+
+-? Wyśrodkuj proszę kolumny z ofertami pracy względem całej strony
+
++ Steps – super to wygląda, ale czy mógłbyś powiększyć (i font i obrazek „step 1 itp) o jakieś 20%? Może być na przykładzie jednego kroku, żebyśmy mieli porównanie.
+
++ Kontakt – zróbmy tam dwie warstwy parallax na tekście. Pierwsza z Contact us, opis i Follow us, a druga z PL, US i mailami. Aktualnie chyba za dużo się dzieje ;P
