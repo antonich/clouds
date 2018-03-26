@@ -1,32 +1,41 @@
-+ zmienic animation gallery ikonki i tekst;
+MENU:
++ linki na menu;
++ zostawiamy tak jak jest – animacja z lewej do prawej. Z tym, że jak jesteśmy na pomarańczowej podstronie „openings” to tło menu mogłoby być dla kontrastu ciemne;
++ zabrac menu background z gwizdkami;
 
-+ przyciski przewjania na tej samej szerokosci co i gallery;
+SECTION 1:
++ dodac 2 planety;
++ 1 z 3 na loader;
++ Dodać pozostałe planety na orbitach
++ Po najechaniu na kategorię, tekst się powiększa i robi pomarańczowy. Dodać efekt „spowolnienia” animacji przy najechaniu na kategorię.
++ Dodać parralax // bardzo slabo wyglada !!!
 
-+ oferty pracy na pomaranczowo z transition;
+SECTION2:
++ Animacja scrolla – znikanie do dołu nie w bok
++ Wybrana ikona bez efektu powiększania
++ Dopasować szybkość pojawiania się tekstu
+- parallax 3 warstwy na title i tekst;
 
-+ dodac plynnosci do background;
-
-- zabrac canvas i zrobic na 2 warstwy z tekstem i 3 w stepach;
-
-+ stepy bez linii;
-
-+ scroll przerzuca przy +-30%;
-
-- z-index =2 tla czawny; nie jest mozliwe chyba 4 rysunki
-
-+ scroll down zabrac po pierwszej panel;
-
-+ canvas dla stepow;
-
-+ sprobowac zrobic slide down z fullpage;
-- linki na menu;
-- 1 z 3 na loader;
-- dodac 2 planety;
-+ menu dodac background z gwizdkami;
-- caly kontakt panel;
-- dodac serwer;
+Oferty pracy:
++ Zwiększyłbym wielkość czcionki nazw stanowisk
++ Zwiększyłbym też wielkość czcionki w opisie stanowiska (może zamiast 		13px dać 16px?)
 - sprawdzic dodawanie z serwera nowych wakancji;
-+ stepy pododawac ikonki;
-- olney font dodac do sekcji;
-- w galerii zamienic na img -> svg i teksty rozne;
-- przyciski left nav dodaja styl do zdjecia;
+
+Steps:
++ Usuwamy małe ikonki – nie potrzebny element przy tak fajnym parallaxie
+
+
+MENU:
++ zostawiamy tak jak jest – animacja z lewej do prawej. Z tym, że jak jesteśmy na pomarańczowej podstronie „openings” to tło menu mogłoby być dla kontrastu ciemne.
+
+Kontakt:
++ Usuwamy linie
++ Dodajemy parallax dla tekstu – dwie warstwy.
+
+
++ olney font dodac do sekcji;
++ w galerii zamienic na img -> svg i teksty rozne;
++ scroll down na koncu pokazuje wgore;
++ linki w menu;
++ zamyka sie po nacisnieciu;
+- dodac hover na buttony;

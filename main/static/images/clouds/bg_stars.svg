@@ -5,8 +5,9 @@
   <style>
     /* <![CDATA[ */
     #bg1 {
-    	background-color: black;
+    	background-color: #717171;
 		opacity: 0.3;
+		transition: background-color .3s ease-in-out;
     }
     #bg1 circle {
       fill: white;

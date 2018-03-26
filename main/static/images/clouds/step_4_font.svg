@@ -3,7 +3,10 @@
 <svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 438.7 172" style="enable-background:new 0 0 438.7 172;" xml:space="preserve">
 <style type="text/css">
-	.st0{stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	svg {
+		fill: #ff5719;
+	}
+	.st0{stroke:#ff5719;stroke-width:0.25;stroke-miterlimit:10;}
 </style>
 <g>
 	<g>
