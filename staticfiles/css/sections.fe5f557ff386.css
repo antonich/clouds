@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'Olney';
-    src: url("../fonts/olney/olney_light.otf") format("opentype");
+    src: url("../fonts/olney/olney_light.40357cc62512.otf") format("opentype");
 }
 
 * {
@@ -27,7 +27,7 @@ body {
 	background-color: #1b1b19;
 	background-color: black;
 	transition: background-color 0s ease-in-out;
-	/*background-image: url('../images/clouds/bg_stars.svg');*/
+	/*background-image: url("../images/clouds/bg_stars.6ee5f135518d.svg");*/
 }
 
 .sections section {
@@ -52,12 +52,12 @@ body {
 }
 
 /*.bg1 {
-	background-image: url('../images/bg.png');
+	background-image: url("../images/bg.cbf1445701b8.png");
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-	background-image: url('../images/clouds/bg_stars.svg');
-	background-image: url('../images/bg-dust.png');
+	background-image: url("../images/clouds/bg_stars.6ee5f135518d.svg");
+	background-image: url("../images/bg-dust.196edcf611b1.png");
 	background-size: cover;
 }*/
 
@@ -65,7 +65,7 @@ body {
 /*    background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-	background-image: url("../images/clouds/bg_stars.svg");
+	background-image: url("../images/clouds/bg_stars.6ee5f135518d.svg");
 	background-size: cover;*/
 	/*transform: scale(1.5);*/
 }
@@ -87,7 +87,7 @@ body {
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-	background-image: url('../images/clouds/bg_stars1.svg');
+	background-image: url("../images/clouds/bg_stars1.1e3cd32229d7.svg");
 	background-size: cover;
 	visibility: none;
 	opacity: 0;
@@ -102,11 +102,11 @@ body {
 }
 
 /*.bg2 {
-	background-image: url('../images/dust1.png');	
+	background-image: url("../images/dust1.10ac16cc350c.png");	
 }*/
 
 /*.bg3 {
-	background-image: url('../images/dust2.png');	
+	background-image: url("../images/dust2.7cc8ea7de317.png");	
 }*/
 
 .bg {
@@ -117,8 +117,8 @@ body {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background-image: url('../images/clouds/background.png');
-	background-image: url('../images/clouds/background_gradient.svg');
+	background-image: url("../images/clouds/background.ae8801afb4fc.png");
+	background-image: url("../images/clouds/background_gradient.33bd0d121b19.svg");
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -131,7 +131,7 @@ body {
 	position: absolute !important;
 	top: 0;
 	left: 0;
-	background-image: url('../images/clouds/background_gradient.svg');
+	background-image: url("../images/clouds/background_gradient.33bd0d121b19.svg");
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@ body {
 
 /* ========= HOME ================================ */
 .home {
-/*	background-image: url(../images/1.jpg);
+/*	background-image: url("../images/1.152ee28bf7ff.jpg");
 	background: black;
 */
 }
@@ -211,8 +211,8 @@ body {
 	position: absolute !important;
 	top: 0;
 	left: 0;
-	background-image: url('../images/bg.png');
-	background-image: url('../images/clouds/background.png');
+	background-image: url("../images/bg.cbf1445701b8.png");
+	background-image: url("../images/clouds/background.ae8801afb4fc.png");
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -253,7 +253,7 @@ body {
 /* ========= OPENINGS ================================ */
 
 #openings {
-/*	background-image: url(../images/3.jpg);
+/*	background-image: url("../images/3.5db8b1b23327.jpg");
 	background: grey;
 */
 	position: relative;
@@ -277,8 +277,8 @@ body {
 	position: absolute !important;
 	top: 0;
 	left: 0;
-	background-image: url('../images/bg.png');
-	background-image: url('../images/clouds/background.png');
+	background-image: url("../images/bg.cbf1445701b8.png");
+	background-image: url("../images/clouds/background.ae8801afb4fc.png");
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -888,8 +888,8 @@ div.gal-item p {
 	position: absolute !important;
 	top: 0;
 	left: 0;
-	background-image: url('../images/bg.png');
-	background-image: url('../images/clouds/background.png');
+	background-image: url("../images/bg.cbf1445701b8.png");
+	background-image: url("../images/clouds/background.ae8801afb4fc.png");
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -992,7 +992,7 @@ div.gal-item p {
 /* ========= HOME ================================ */
 
 #process {
-/*	background-image: url(../images/4.jpg);
+/*	background-image: url("../images/4.3eef5cb68b10.jpg");
 	background: orange;
 */}
 

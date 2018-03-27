@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Olney';
-    src: url("../fonts/olney/olney_light.otf") format("opentype");
+    src: url("../fonts/olney/olney_light.40357cc62512.otf") format("opentype");
 }
 
 * {
@@ -185,7 +185,7 @@
 	left: 0;
 	overflow-x: hidden;
 	transition: 0.5s;
-	/*background-image: url("../images/clouds/bg_stars2.svg");*/
+	/*background-image: url("../images/clouds/bg_stars2.4a76f8040a49.svg");*/
 }
 
 .menu-content svg.menu-top-logo {

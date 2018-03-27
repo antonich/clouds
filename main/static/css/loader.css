@@ -21,13 +21,18 @@
     align-items: center;
 }
 
-#loader div {
-    padding: .3em 0;
+
+.loader-logo {
+    height: 20%;
+    width: 20%;
+    margin-bottom: 2em;
 }
 
 .loader-logo img {
     height: 152px;
     width: 170px;
+    width: 100%;
+    height: 100%;
 }
 
 .loader-cont {
@@ -40,11 +45,13 @@
 .loader-cont img {
     width: 260px;
     height: 240px;
+    height: 100%;
+    width: 56%;
     margin: 0 auto;
 }
 
 .loader-cont h1 {
-    margin: .3em 0;
+    margin: .4em 0;
     font-size: 45px;
 }
 

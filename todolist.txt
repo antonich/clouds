@@ -55,3 +55,9 @@ Kontakt:
 + Steps – super to wygląda, ale czy mógłbyś powiększyć (i font i obrazek „step 1 itp) o jakieś 20%? Może być na przykładzie jednego kroku, żebyśmy mieli porównanie.
 
 + Kontakt – zróbmy tam dwie warstwy parallax na tekście. Pierwsza z Contact us, opis i Follow us, a druga z PL, US i mailami. Aktualnie chyba za dużo się dzieje ;P
+
++ zrobic ikonki dla gallery mniejsze przy zmiejszeniu ekranu;
++ pozmieniac na % albo em;
++ pozmieniac bg na nowe zjecia;
++ dluzszy czas ladowania strony;
++ zmienic max-width do 120% na section 2 i 3;
