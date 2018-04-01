@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="linkedin_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#231F20;}
+    .linken-svg {fill:white;}
+    svg:hover .linken-svg {fill: black;}
+    .active-path {
+        display: none;
+    }
+    svg:hover .active-path {
+        display: block;
+        fill: #ff5719;
+    }
+</style>
+<path class="active-path" d="M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30s30-13.4,30-30S46.6,0,30,0L30,0z"/>
+<g>
+	<rect x="17.5" y="25.7" class="linken-svg" width="5.3" height="17.2"/>
+	<path class="linken-svg" d="M20.2,23.3c-1.7,0-3.1-1.4-3.1-3.1c0-1.7,1.4-3.1,3.1-3.1c1.7,0,3.1,1.4,3.1,3.1
+		C23.3,21.9,21.9,23.3,20.2,23.3z"/>
+	<path class="linken-svg" d="M42.9,42.9h-5.3v-8.4c0-2,0-4.6-2.8-4.6c-2.8,0-3.2,2.2-3.2,4.4v8.5h-5.3V25.7h5.1V28h0.1
+		c0.7-1.4,2.5-2.8,5.1-2.8c5.4,0,6.4,3.6,6.4,8.2V42.9z"/>
+</g>
+<path class="linken-svg" d="M30,2c15.4,0,28,12.6,28,28S45.4,58,30,58S2,45.4,2,30S14.6,2,30,2 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30
+	s30-13.4,30-30S46.6,0,30,0L30,0z"/>
+</svg>

@@ -48,9 +48,9 @@ Kontakt:
 
 + Mógłbyś zrobić większe ikony wartości? Myślę że można zrobić aktywną na środku i po jednej po każdej stronie – nie będzie widać od razu 5 ale przynajmniej będą większe
 
--? Zacina się coś animacja przy przejściu na oferty pracy
++ Zacina się coś animacja przy przejściu na oferty pracy
 
--? Wyśrodkuj proszę kolumny z ofertami pracy względem całej strony
++ Wyśrodkuj proszę kolumny z ofertami pracy względem całej strony
 
 + Steps – super to wygląda, ale czy mógłbyś powiększyć (i font i obrazek „step 1 itp) o jakieś 20%? Może być na przykładzie jednego kroku, żebyśmy mieli porównanie.
 
@@ -61,3 +61,25 @@ Kontakt:
 + pozmieniac bg na nowe zjecia;
 + dluzszy czas ladowania strony;
 + zmienic max-width do 120% na section 2 i 3;
++ w values zabrac przycisk w dol na poczatku w sec3;
++ zabrac scroll kiedy nie jest potrzebny w sec3;
++ zabrac skoszne przerywane sec1;
++ scroll down center;
++ button w sec3 hover black;
++ pasek szary;
++ tekst na czarno w sec3 po svg i na 16px;
++ apply now na bialo a tekst na czarno;
++ zmienic dodawanie wakancji;
++ button back 2x do tekstu;
++ contact zrobic wiekszym;
++ menu powiekszyc margin pomiedzy tekstem;
++ dorobic animacje do pomaranczowej sekcji;
++ top icon link top;
++ porownac galerije;
++ dodac fade in out;
+- change to 3000 time loading;
+
++ change gallery behavion on prev click(animation);
++ add icons;
+- start mobile web dev;
++ add resize calc of elements;

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="facebook_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#231F20;}
+    .face-svg {fill:white;}
+    svg:hover .face-svg {fill:red;}
+    svg:hover .face-svg {fill:black;}
+    .active-path {
+        display: none;
+    }
+    svg:hover .active-path {
+        display: block;
+        fill: #ff5719;
+    }
+</style>
+<path class="active-path" d="M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30s30-13.4,30-30S46.6,0,30,0L30,0z"/>
+<path class="face-svg" d="M30,2c15.4,0,28,12.6,28,28S45.4,58,30,58S2,45.4,2,30S14.6,2,30,2 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30
+	s30-13.4,30-30S46.6,0,30,0L30,0z"/>
+<path class="face-svg" d="M36,31.9c0.4,0,0.7-0.3,0.7-0.6l0.5-3.9c0.1-0.4-0.3-0.8-0.7-0.8h-4.6v-3.2c0-1.5,0.4-2.5,2.5-2.5l1.9,0
+	c0.4,0,0.7-0.3,0.7-0.7v-3.2c0-0.4-0.3-0.7-0.7-0.7h-3.2c-3.9,0-6.5,2.4-6.5,6.7v3.7h-3.1c-0.4,0-0.7,0.3-0.7,0.7l0,3.9
+	c0,0.4,0.3,0.7,0.7,0.7h3.1l0,12l5.2,0l0-12H36z"/>
+</svg>

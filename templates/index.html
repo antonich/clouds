@@ -14,9 +14,11 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/sections.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/component.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/fixed_elements.css' %}" />
-		<ling rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/fixed_elements.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/media425px.css' %}" />
+		<!-- <ling rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css" /> -->
  		<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-		<script src="{% static 'js/modernizr.custom.js' %}"></script>
+		<!-- <script src="{% static 'js/modernizr.custom.js' %}"></script> -->
 	</head>
 	<body class="stop-scrolling">
 		<div id="loader-wrapper">
@@ -66,8 +68,9 @@
 					<div class="menu-social">
 						<div class="menu-social-inner">
 							<p>Follow us:</p>
-							<img src="{% static 'images/facebook-icon.svg' %}" />
-							<img src="{% static 'images/facebook-icon.svg' %}" />
+							<a href="##facebook"><img src="{% static 'images/clouds/facebook_basic.svg' %}" class="svg"/></a>
+							<a href="##instagram"><img src="{% static 'images/clouds/instagram_basic.svg' %}" class="svg" /></a>
+							<a href="##facebook"><img src="{% static 'images/clouds/linkedin_basic.svg' %}" class="svg" /></a>
 						</div>
 					</div>
 				</div>
@@ -76,8 +79,9 @@
 			<div class="social-links">
 				<div class="social-links-inner">
 					<p>Follow us</p>
-					<img src="{% static 'images/facebook-icon.svg' %}" />
-					<img src="{% static 'images/facebook-icon.svg' %}" />
+					<a href="##facebook"><img src="{% static 'images/clouds/facebook_basic.svg' %}" class="svg"/></a>
+					<a href="##instagram"><img src="{% static 'images/clouds/instagram_basic.svg' %}" class="svg" /></a>
+					<a href="##facebook"><img src="{% static 'images/clouds/linkedin_basic.svg' %}" class="svg" /></a>
 				</div>
 			</div>
 
@@ -96,7 +100,9 @@
 				<p>@ 2018 CLOUDS ON MARS</p>
 			</div>
 
-			<div class="bot"></div>
+			<div class="bot">
+				<img src="{% static 'images/clouds/bot_icon.svg' %}" class="svg" />
+			</div>
 
 <!-- 			<div id="side-nav" class="side-nav">
 				<nav id="left-nav">
@@ -132,9 +138,9 @@
 							<img src="{% static 'images/clouds/view1back.svg' %}" class="svg" />
 						</div>
 						<!-- scroll on click with hash code -->
-						<div><a href="#section2" id="home-values">VALUES</a></div>
-						<div><a href="#section3" id="home-open">OPENINGS</a></div>
-						<div><a href="#section4" id="home-process">PROCESS</a></div>
+						<div><a href="#section2" class="content-hidden" id="home-values">VALUES</a></div>
+						<div><a href="#section3" class="content-hidden" id="home-open">OPENINGS</a></div>
+						<div><a href="#section4" class="content-hidden" id="home-process">PROCESS</a></div>
 					</div>
 				</section>
 
@@ -163,7 +169,7 @@
 								<p>LOVE YOUR CUSTOMER</p>
 							</div>
 						</div>
-						<div class="gal-content">
+						<div class="gal-content content-hidden">
 							<div class="gal-btn">
 								<button id="prev"><i class="left"></i></button>
 								<button id="next"><i class="right"></i></button>
@@ -195,12 +201,21 @@
 				</section>
 
 				<section data-anchor="section3" id="values" class="values section">
-					<div class="val-content">
+					<div class="val-content content-hidden">
 						<div class="val-inner">
 							<div class="butt butt-disable" id="val-but-up"><i class="up"></i></div>
 							<div class="butt" id="val-but-down"><i class="down"></i></div>
 							<div class="val-jobs">
 								<div class="jobs-sections job-sec-active">
+									{% for jobs in jobs_list %}
+									<ul class="val-col">
+										{% for job in jobs %}
+										<li id="{{ job.id }}">{{ job.title }}</li>
+										{% endfor %}
+									</ul>
+									{% endfor %}
+								</div>
+<!-- 								<div class="jobs-sections">
 									<ul class="val-col">
 										<li id="1">BI EXPLORER</li>
 										<li id="2">AZURE EXPLORER</li>
@@ -208,41 +223,22 @@
 										<li id="3">ASSISTANT SALES EXPLORER</li>
 										<li id="1">JUNIOR BI EXPLORER</li>
 									</ul>
-									<ul class="val-col">
-										<li id="1">MASTER AI AND DEEP LEARNING EXPLORER</li>
-										<li id="3">ASSISTANT SALES EXPLORER</li>
-										<li id="1">BI EXPLORER</li>
-									</ul>
-								</div>
-								<div class="jobs-sections">
-									<ul class="val-col">
-										<li id="1">BI EXPLORER</li>
-										<li id="2">AZURE EXPLORER</li>
-										<li id="1">BI EXPLORER</li>
-										<li id="3">ASSISTANT SALES EXPLORER</li>
-										<li id="1">JUNIOR BI EXPLORER</li>
-									</ul>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="val-desc">
-							<div id="1" class="val-text">
+							{% for job in jobs %}
+							<div id="{{ job.id }}" class="val-text">
 								<div class="val-text-inner">
 									<div class="val-text-cont">
 										<div class="return"><i class="back"></i></div>
-										<h2>AZURE EXPLORER</h2>
+										<h2>{{ job.title }}</h2>
 										<div class="val-text-info" id="val-info">
 											<h4>WE ARE LOOKING FOR:</h4>
-											<p>ID is 1;BI EXPLORER  What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+											<p>{{ job.looking_for }}
 											</p>
 											<h4>YOUR RESPONSIBILITIES:</h4>
-											<p>ID is 1;BI EXPLORER  What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-											</p>
-											<p>ID is 1;BI EXPLORER  What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-											</p>
-											<p>ID is 1;BI EXPLORER  What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-											</p>
-											<p>ID is 1;BI EXPLORER  What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+											<p>{{ job.responsibilities }}
 											</p>
 										</div>
 									</div>
@@ -257,15 +253,7 @@
 									</div>
 								</div>
 							</div>
-							<div id="2" class="val-text">
-								<p>ID is 2;AZURE EXPLORER  What is Lorem Ipsum?
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-							</div>
-							<div id="3" class="val-text">
-								<p>ID is 3; What is Lorem Ipsum?
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-								</p>
-							</div>
+							{% endfor %}
 						</div>
 					</div>
 				</section>
@@ -276,8 +264,8 @@
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_1_font.svg' %}" />
-								<div class="step-desc">
-									<h1>SELECT</h1>
+								<div class="step-desc content-hidden">
+									<h1 class="step-hidden">SELECT</h1>
 									<p>If you like our culture and one of our openings please talk to our bot.
 									</p>
 									<span>No boring forms to fill in.</span>
@@ -287,17 +275,20 @@
 					</div>
 				</section>
 
-				<section data-anchor="section5" id="contact" class="section">
+				<section data-anchor="section5" id="step2" class="section">
 					<div class="step1-cont">
 						<div class="bg-sec"></div>
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_2_font.svg' %}" />
-								<div class="step-desc">
-									<h1>QUERY</h1>
-									<p>Interviews are scheduled for one day in a person in our office or via Skype. We will talk about like, technology and business. We may even write some code together. You will centainly meet your new very human manager. Then we will use our quantum powers to provide you with speedy answer, data based feedback and sometimes an offer.
+								<div class="step-desc content-hidden">
+									<div class="step-anim">
+										<h2>QUERY</h2>
+										<span class="text__first-bg"></span>
+									</div>
+									<p class="step-hidden-delay">Interviews are scheduled for one day in a person in our office or via Skype. We will talk about like, technology and business. We may even write some code together. You will centainly meet your new very human manager. Then we will use our quantum powers to provide you with speedy answer, data based feedback and sometimes an offer.
 									</p>
-									<span>No more waiting forever.</span>
+									<span class="step-hidden-delay">No more waiting forever.</span>
 								</div>
 							</div>
 						</div>
@@ -305,14 +296,14 @@
 				</section>
 
 
-				<section data-anchor="section6" id="contact" class="section">
+				<section data-anchor="section6" id="step3" class="section">
 					<div class="step1-cont">
 						<div class="bg-sec"></div>
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_3_font.svg' %}" />
-								<div class="step-desc">
-									<h1>QUERY</h1>
+								<div class="step-desc content-hidden">
+									<h1 class="step-hidden">QUERY</h1>
 									<p>If you like us and we like we will sign a waiver and you are all set to start an adventure at Clouds On Mars.
 									</p>
 									<span>No more dullness.</span>
@@ -323,14 +314,14 @@
 				</section>
 
 
-				<section data-anchor="section7" id="contact" class="section">
+				<section data-anchor="section7" id="step4" class="section">
 					<div class="step1-cont">
 						<div class="bg-sec"></div>
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_4_font.svg' %}" />
-								<div class="step-desc">
-									<h1>QUERY</h1>
+								<div class="step-desc content-hidden">
+									<h1 class="step-hidden">QUERY</h1>
 									<p>Interviews are scheduled for one day in a person in our office or via Skype. We will talk about like, technology and business. We may even write some code together. You will centainly meet your new very human manager.
 									</p>
 									<span>No more loneliness.</span>
@@ -346,13 +337,13 @@
 						<div class="cont-par">
 							<div class="contact-us">
 								<h2 class="cont-z1">CONTACT US</h2>
-								<p class="cont-z1">Greate that you have passed by. Come more often! Follow us on Facebook and Linkendl - then you will get latest updates on our mission, the new searches for explorers and events we organize to celebrate with out fans.</p>
+								<p class="cont-z1 content-hidden">Greate that you have passed by. Come more often! Follow us on Facebook and Linkendl - then you will get latest updates on our mission, the new searches for explorers and events we organize to celebrate with out fans.</p>
 								<div class="cont-info cont-z2">
 									<h2 >PL</h2>
 									<span>Clouds on Mars Sp.z o.o.</span>
 								</div>
-								<p class="cont-z2">Address: Zgoda 3/8, Warsaw</p>
-								<p class="cont-z2"><a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
+								<p class="cont-z2 content-hidden">Address: Zgoda 3/8, Warsaw</p>
+								<p class="cont-z2 content-hidden"><a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
 							</div>
 							<div class="follow-us">
 								<h2 class="cont-z1">FOLLOW US</h2>
@@ -361,8 +352,8 @@
 										<h2 class="cont-z1">US</h2>
 										<span class="cont-z1">Clouds on Mars Inc.</span>
 									</div>
-									<p class="cont-z2">Address: Zgoda 3/8, Warsaw</p>
-									<p class="cont-z2">Mail: <a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
+									<p class="cont-z2 content-hidden">Address: Zgoda 3/8, Warsaw</p>
+									<p class="cont-z2 content-hidden">Mail: <a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
 								</div>
 							</div>
 						</div>
@@ -577,20 +568,46 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js"></script>
 		<script>
 			$(document).ready(function() {
+
+				if($('.jobs-sections.job-sec-active').next()[0] == undefined)
+					$('.values .butt').addClass('butt-disable');
+
 				$('#fullpage').fullpage({
 					//Navigation
 					menu: '#left-nav',
 					easingcss3: 'cubic-bezier(1.000, -0.440, 0.265, 1.385)',
 					scrollingSpeed: 800,
 
-	
 					afterLoad: function(anchorLink, index){
 						var loadedSection = $(this);
 						var imgClass = $('#bg1').attr('class');
 
+						var section = $('section')[index-1];
+						$(section).find('.content-hidden').addClass('content-visible').removeClass('content-hidden');
+						if(index == 5) {
+							var tl = new TimelineLite({delay: 0}),
+							tl1 = new TimelineLite({delay: .4}),
+							tl2 = new TimelineLite({delay: 0.8}),
+							firstBg = document.querySelectorAll('.text__first-bg'),
+							word  = document.querySelectorAll('.step-anim h2'),
+							p_tag = document.querySelectorAll('.step-desc p'),
+							span_tag = document.querySelectorAll('.step-desc span.step-hidden-delay');
+
+							tl
+							.to(firstBg, .3, {scaleX:1})
+							.to(word, .1, {opacity:1})  
+							.to(firstBg, .3, {scaleX:0});
+							
+
+							tl1
+							.to(p_tag, .3, {opacity:1});
+
+							tl2
+							.to(span_tag, .3, {opacity:1});
+						}
+
 						// controlling scroll down
 						if(index > 1 && index != 8) {
-							// $("#scroll-down").css('display', 'none');
 							$("#scroll-down").addClass("scroll-dis");
 						} else if (index == 8) {
 							$("#scroll-down .scroll-down").css('display', 'none');
@@ -615,10 +632,6 @@
 			                $("body").css('background-color', "#ff5719");
 			                $(".menu-content").addClass('menu-change3sec');
 						}
-
-						// if(index > 5) {
-						// 	$('#step1-plx').css('transform', 'rotateX(-20deg) rotateY(10deg)');
-						// }
 					},
 					onLeave: function(index, nextIndex, direction) {
 						if($('#val-info:hover').length === 1) {
@@ -627,44 +640,27 @@
 						var leavingSection = $(this);
 						var imgClass = $('#bg1').attr('class');
 
+						var section = $('section')[index-1];
+						$(section).find('.content-visible').addClass('content-hidden').removeClass('content-visible');
+						
+						$('.step-anim h2').css('opacity', '0');
+						// $('.step-desc p').css('opacity', '0'),
+						$('.step-desc .step-hidden-delay').css('opacity', '0');
+
 						//using index to change background styles for 3rd section
 						if(index == 3) {
 							// super efekt
-							setTimeout(function(){
-				                if(typeof imgClass !== 'undefined') {
-				                    $('#bg1').attr("class", "");
-				                    // should be add svg and replaced-svg
-				                }
-							}, 0);
+		                    $('#bg1').attr("class", "");
 			                $("body").css('background-color', "black");
 
 			                $("#container").removeClass('value-active');
-			                $('#bg-top').css('display', 'block');
 			                $(".menu-content").removeClass('menu-change3sec');
 
-						} //else if(index==2 && direction == 'down') {
-							// setTimeout(function(){
-				   //              if(typeof imgClass !== 'undefined') {
-				   //                  $('#bg1').attr('class', imgClass+' bg1-changed');
-				   //                  // console.log($('#bg1 circle').css('fill', 'green'));
-				   //              }
-			    //             	// add class to style fixed section
-			    //             	// $('#bg-top').css('display', 'none');
-				   //              $("#container").addClass('value-active');
-				   //              $("body").css('background-color', "#ff5719");
-							// }, 1000); // change to 100
+							setTimeout(function(){
+				                $('#bg-top').css('display', 'block');
+							}, 100); // change to 100
 
-						//} else if(index==4 && direction == 'up') {
-							// setTimeout(function(){
-				   //              if(typeof imgClass !== 'undefined') {
-				   //                  $('#bg1').attr('class', imgClass+' bg1-changed');
-				   //              }
-				   //              // $('#bg-top').css('display', 'none');
-			    //             	// add class to style fixed section
-				   //              $("#container").addClass('value-active');
-				   //              $("body").css('background-color', "#ff5719");
-							// }, 1000); // change to 100
-					//	}
+						}
 
 					}
 
@@ -714,12 +710,13 @@
 			});
 
 			$('#scroll-down .scroll-up').on('click',function() {
-				console.log('siema');
 				$.fn.fullpage.moveTo(1);
 			});
-			// $("#val-info").hover(function() {
-			// 	console.log('siemka');
-			// });
+
+			$('.top-logo').click(function() {
+				$.fn.fullpage.moveTo(1);
+			});
+
 
 		</script>
 
@@ -728,35 +725,27 @@
 		(function(){
 			var items = $('.gal-item');
 			var pos = [];
+			
 			// when loaded positions are calculated
+			var widthItems = $('.gal-items')[0].offsetWidth;
+			var widthItem = $('.gal-item')[2].offsetWidth;
+			var marginForFirst = (widthItems - (widthItems - (widthItems/5) + widthItem))/2;
 
 			items.css('left', function(index) {
 				// should include margins
 				var widthItems = $('.gal-items')[0].offsetWidth / 5;
 				var widthItem = $('.gal-item')[2].offsetWidth;
-				pos.push((index * widthItems) + widthItem/2);
-				if (index == 2) pos[index] = pos[index] - 20;
-				else if(index == 1)
-					pos[index] = pos[index] - 20; 
-				else if(index == 3)
-					pos[index] = pos[index] + 20; 
-					
-				return (pos[index] - 20);
+				pos.push((index * widthItems) + marginForFirst);
+				return (pos[index]);
 			});
 
-			// $($(items[1]).context.childNodes[3]).css('display', 'block');
-
-			// $($(items[3]).context.childNodes[3]).css('display', 'block');
 
 			$($('.gal-item > p')[1]).css('display', 'block');
 			$($('.gal-item > p')[3]).css('display', 'block');
 
-			// $($($('.gal-item > svg')[1])[0]).context.classList.add('gal-even');
-			// $($($('.gal-item > svg')[3])[0]).context.classList.add('gal-even')
-
+			// place slider element before so can start from click prev
 			var slides = $('.slider');
 			slides.first().before(slides.last());
-			// console.log(slides);
 
 			// on button press
 			$('.gal-btn > button').on('click', function() {
@@ -815,7 +804,7 @@
 				} else if(button.attr('id') == 'prev') {
 					var first_elem = $('.gal-item:eq(4)').clone(true);
 					items.first().before(first_elem);
-					first_elem.css('left', '-100%');
+					first_elem.css('left', '-10%');
 					items = $('.gal-item');
 					// Move first slide to the end so the user can keep going forward
 					for(var i = 5; i > 0; i--) {
@@ -851,8 +840,24 @@
 					$($($('.gal-item > svg')[3])[0]).context.classList.add('gal-even');
 				}
 
-
 			});
+
+			// recalc on resize
+			$( window ).resize(function() {
+				var widthItems = $('.gal-items')[0].offsetWidth;
+				var widthItem = $('.gal-item')[2].offsetWidth;
+				var marginForFirst = (widthItems - (widthItems - (widthItems/5) + widthItem))/2;
+				items = $('.gal-item');
+				items.css('left', function(index) {
+					widthItems = $('.gal-items')[0].offsetWidth / 5;
+					widthItem = $('.gal-item')[2].offsetWidth;
+					// pos.push((index * widthItems) + marginForFirst);
+					pos[index] = (index * widthItems) + marginForFirst;
+					return (pos[index]);
+				});
+				console.log(pos);
+			});
+
 		})();
                                 
 		</script>

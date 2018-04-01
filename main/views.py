@@ -1,10 +1,20 @@
-from django.views.generic.base import TemplateView
+from django.shortcuts import render
+from django.views.generic import View
 
-class HomePageView(TemplateView):
+from main.models import Job
 
-    template_name = "index.html"
+class HomePageView(View):
+    template_name = 'index.html'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['latest_articles'] = Article.objects.all()[:5]
-    #     return context
+    def get(self, request, *args, **kwargs):
+        jobs = Job.objects.all()
+        jobs_list = [[]]
+        num = 1
+        for count, job in enumerate(jobs, start=1):
+            if(count <= (num * 5)):
+                jobs_list[num-1].append(job)
+            if(count == (num*5)):
+                jobs_list.append([])
+                num += 1
+
+        return render(request, self.template_name, {'jobs_list': jobs_list, 'jobs':jobs})
