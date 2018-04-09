@@ -8,7 +8,8 @@
     	background-color: #ff5719;
     }
     circle {
-      fill: black;
+      fill: white;
+      opacity: 0.5;
     }
     /* ]]> */
   </style>

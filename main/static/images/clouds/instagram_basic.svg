@@ -14,9 +14,17 @@
         display: block;
         fill: #ff5719;
     }
+
+    .value-active svg:hover .face-svg {
+        fill:#ff5917;
+    }
+
+    .value-active svg:hover .insta-svg {
+        fill:#ff5917;
+    }
 </style>
 <path class="active-path" d="M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30s30-13.4,30-30S46.6,0,30,0L30,0z"/>
-<path class="insta-svg" d="M30,2c15.4,0,28,12.6,28,28S45.4,58,30,58S2,45.4,2,30S14.6,2,30,2 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30
+<path class="insta-svg border-black" d="M30,2c15.4,0,28,12.6,28,28S45.4,58,30,58S2,45.4,2,30S14.6,2,30,2 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30
 	s30-13.4,30-30S46.6,0,30,0L30,0z"/>
 <g>
 	<path class="insta-svg" d="M35.6,17.6H24.4c-3.8,0-6.8,3.1-6.8,6.8v11.1c0,3.8,3.1,6.8,6.8,6.8h11.1c3.8,0,6.8-3.1,6.8-6.8V24.4

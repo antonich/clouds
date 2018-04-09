@@ -81,5 +81,127 @@ Kontakt:
 
 + change gallery behavion on prev click(animation);
 + add icons;
-- start mobile web dev;
++ start mobile web dev;
 + add resize calc of elements;
++ disable auto scroll;
++  openings add apply now;
+
+
+1. Gradient
+
++ Gradient w svg nam nie pomoże raczej, ale zrobiłem nowy PNG i to chyba to.
+
++ Udało mi się zminimalizować pasy i wygładzić przejście tonalne. Podsyłam Ci też pomarańczowy.
+
+2. Strona wersja desktopowa:
+
+? Na stronie głównej przy podświetleniu kategorii mars ma dziwne zniekształcenia krawędzi.
+
++ Zwiększyłbym na stronie głównej odległości między ikonkami w social media
++ Zlikwidowałbym krawędź (lub zrobił ją pomarańczową) w nawigacji z lewej strony.
+
++ W menu dałbym równe odstępy względem góry i dołu strony
+
++ Social media w menu dziwnie się podświetlają, zróbmy bez krawędzi, całe na biało, analogicznie do nawigacji bocznej na stronie.
+
++ Powiększyłbym ikony wartości.
+
++ Na podstronie opisu oferty pracy zlikwidowałbym krawędź przycisku przy podświetlaniu.
+
++ Sekcję „We think” wyrównałbym do lewej strony.
+
++ Po najechaniu na mail w kontakcie zróbmy go na biało jako aktywny.
+
++ Pamiętaj też o ikonach social media na podstronie kontakt. Zzy potrzebujesz wizualizacji z trzema?
+
++ menu zrobic na 100vh(dodac do script);
+ 
+
+3. Animacje wersja desktopowa:
+
++ To co zrobiłeś w STEP 2 jest świetne. Zróbmy tak w każdym kroku i podstronie kontakt gdzie „US” i „PL” będą się pojawiały jak „QUERY” w step 2.
+
++ Bardzo podoba mi się prędkość efektu „fade in” opisu „step2. Czy mógłbyś zrobić tak, by „fade out” też był takiej prędkości?
+
++ Czy mógłbyś zastosować prędkości „Fade in” i „Fade out” do pozostałych podstron?
+
++ Fajnie jakby orbity i kategorie na stronie głównej miały efekt „fade in” i „fade out”
+
+ 
+
+4. Strona wersja mobile:
+
++ Super, że udało Ci się zrobić animację w tle!
+
++ Kolor tła jest za jasny, ale domyślam się, że to chwilowe 😉
+
++ W menu dałbym większe odstępy między kategoriami i analogicznie do wersji desktopowej równe margines górny i dolny.
+
++ Jeżeli mamy mniej ofert pracy to mimo wszystko robił bym pomarańczowe tło wielkości ekranu komórki – załączam zrzut ekranu.
+
++ Podoba mi się, że logo, bot i menu są na stałe „przyczepione” do ekranu. Przyczepmy też tak social media.
+
++ Podobają mi się pochylone nagłówki „steps” w widoku poziomym. Zastosowałbym ten efekt w widoku pionowym. Ale niech pochylone będą tylko „steps” inne nagłówki, jak na przykład aktualnie „contact” zrób normalne 😉
+
++ porównać względem zdjęcia;
++ dodać pomaranczowe tlo;
+Wersja desktopowa
+
++ przy kółkach po lewej są jakieś ukryte sekcje. (przesyłam plik)
+
++ wyrównaj proszę nawigację po bokach, względem bocznych kółek i bota (wczoraj w jednym z plików rysowałem) zrób ją pomarańczową, albo bez
+
+
+- na podstronie z wartościami zróbmy żeby wyświetlały się tylko 3 zamiast 5, da to możliwość zwiększenia odległości między nimi. (przesyłam plik)
+
+- na podstronie z wartościami zróbmy większy odstęp pionowy między ikonami a nagłówkiem. (przesyłam plik)
+
+- na podstronie z wartościami dodajmy kółka slidera. (przesyłam plik)
+
+ 
+
+-? Podstrona z opisem oferty pracy, tutaj jeżeli nie ma długiego tekstu to całość powinna się wyśrodkowywać w poziomie względem całej strony.
+
++ Na podstronie z opisem oferty pracy oddal proszę pasek do przewijania od sekcji „We think” – myślę, że o dwa razy tyle, co jest aktualnie
+
+ 
+
++ Większości osób nie podobają się pomarańczowe animacje nagłówków przy „steps”, „PL” i „US” :/ Mógłbyś zastosować zwykły fade in i fade out?
+
++ Na stronie kontakt usuń proszę ikony social media z prawego górnego rogu – dużo osób mówiło, że „gryzą” się z tymi dużymi.
+
++ Duże ikony social media mają czarną obwódkę
+
+
+1. Desktop.
+
+- dodać kółka przy wartościach
+
++ zmniejszyć szerokość paska w opisie stanowiska
+
++ gdy jest mniejsza ilość tekstu w opisie stanowiska to wyśrodkujmy je względem wysokości strony – myślę, że „we think” również
+
++ aktywne ikony social media na pomarańczowym tle, podświetlają się na pomarańczowo, a nie ciemnoszaro.
+
++ Dodaj proszę ikonę rakiety z „scroll down” na ofertach pracy i ich opisach.
+
++ spowalniamy lekko animacje pojawiania się kroków (ich opisów)
++ w kontakcie pojawia się w tym samym momencie „Contact us z opisem” i „follow US z opisem” później dane kontaktowe, możemy to rozbić jeszcze na oddzielnie PL/US i maile.
+
+
+2. Mobile
++ dodajemy ciemne paski (60-80% opacity?) pod logiem, menu i social mediami i botem.
+
++ likwidujemy ten efekt z pomarańczowym tłem
+
++ steps robimy wszystko na prosto – bez pochylenia
+
++ dodaj PL i US w kontakcie. 
+
+3. Bot
+
++ Zostawiamy pomarańczowe tło, a na opisach stanowisk robimy analogicznie do aktywnych ikon, czyli ciemno szare.
+
+- Fajnie jakby udało Ci się zrobić ikonę bota wewnątrz rozmowy.
+
+

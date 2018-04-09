@@ -10,15 +10,17 @@
 		<meta name="description" content="Clouds On Mars" />
 		<meta name="keywords" content="cloudsOnMars" />
 		<meta name="author" content="cloudsOnMars" />
+ 		<link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+		<link rel="stylesheet" href="{% static 'js/owlCarousel/dist/assets/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'js/owlCarousel/dist/assets/owl.theme.default.min.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/loader.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/sections.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/component.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/fixed_elements.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static 'css/fixed_elements.css' %}" />
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/media425px.css' %}" />
-		<!-- <ling rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css" /> -->
  		<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-		<!-- <script src="{% static 'js/modernizr.custom.js' %}"></script> -->
+		<script src="{% static 'js/VHChromeFix.js' %}"></script>
 	</head>
 	<body class="stop-scrolling">
 		<div id="loader-wrapper">
@@ -46,6 +48,9 @@
 
 		<div class="container" id="container">
 
+			<div class="top-line"></div>
+			<div class="bottom-line"></div>
+
 			<div class="top-logo">
 				<img src="{% static 'images/clouds/Clouds_logo_small2.svg' %}" class="svg" />
 			</div>
@@ -57,20 +62,22 @@
 					<div class="menu-bar3"></div>
 				</div>
 				<div class="menu-content">
-					<img class="menu-top-logo svg" src="{% static 'images/Clouds_logo_big.svg' %}" />
-					<div class="menu-nav" id="menu-nav">
-						<a href="#section1">HOME</a>
-						<a href="#section2">VALUES</a>
-						<a href="#section3">OPENINGS</a>
-						<a href="#section4">PROCESS</a>
-						<a href="#section8">CONTACT</a>
-					</div>
-					<div class="menu-social">
-						<div class="menu-social-inner">
-							<p>Follow us:</p>
-							<a href="##facebook"><img src="{% static 'images/clouds/facebook_basic.svg' %}" class="svg"/></a>
-							<a href="##instagram"><img src="{% static 'images/clouds/instagram_basic.svg' %}" class="svg" /></a>
-							<a href="##facebook"><img src="{% static 'images/clouds/linkedin_basic.svg' %}" class="svg" /></a>
+					<div class="menu-content-inner">
+						<img class="menu-top-logo svg" src="{% static 'images/Clouds_logo_big.svg' %}" />
+						<div class="menu-nav" id="menu-nav">
+							<a href="#section1">HOME</a>
+							<a href="#section2">VALUES</a>
+							<a href="#section3">OPENINGS</a>
+							<a href="#section4">PROCESS</a>
+							<a href="#section8">CONTACT</a>
+						</div>
+						<div class="menu-social">
+							<div class="menu-social-inner">
+								<p>Follow us:</p>
+								<a href="##facebook"><img src="{% static 'images/clouds/facebook_basic.svg' %}" class="svg"/></a>
+								<a href="##instagram"><img src="{% static 'images/clouds/instagram_basic.svg' %}" class="svg" /></a>
+								<a href="##facebook"><img src="{% static 'images/clouds/linkedin_basic.svg' %}" class="svg" /></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -87,11 +94,11 @@
 
 			<div class="scroll-down-img" id="scroll-down">
 				<div class="scroll-down">
-					<img src="{% static 'images/clouds/steps_icons-03.svg' %}" />
+					<img src="{% static 'images/clouds/steps_icons-03.svg' %}" class="svg" />
 					<p>SCROLL</p>
 				</div>
 				<div class="scroll-up">
-					<img src="{% static 'images/clouds/steps_icons-03.svg' %}" />
+					<img src="{% static 'images/clouds/steps_icons-03.svg' %}" class="svg" />
 					<p>SCROLL UP</p>
 				</div>
 			</div>
@@ -104,28 +111,34 @@
 				<img src="{% static 'images/clouds/bot_icon.svg' %}" class="svg" />
 			</div>
 
-<!-- 			<div id="side-nav" class="side-nav">
-				<nav id="left-nav">
-					<a href="#home" class="cbp-fbcurrent">Section 1</a>
-					<a href="#values">Section 2</a>
-					<a href="#openings">Section 3</a>
-					<a href="#process">Section 4</a>
-					<a href="#contact">Section 5</a>
-					<a href="#contact">Section 6</a>
-				</nav>
-			</div> -->
+			<div class="bot-chat">
+				<div class="bot-close-but">
+					<div class="bot-bar1"></div>
+					<div class="bot-bar2"></div>
+				</div>
+			    <div id="bot_chat">
+			    </div>
+			    <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+			    <script>
+					BotChat.App({
+					            directLine: { secret: 'etAF1piYhzI.cwA.SM4.TCH8wOxqbH1gvaV5d3WOxyNDZttR8dR7_qGCpPDQiBw' },
+					            user: { id: 'Uzytkownik' },
+					            bot: { id: 'f8566ab8-8499-4d84-807e-b75e7a356d6f' },
+					            resize: 'detect'
+					        }, document.getElementById("bot_chat"));
+			    </script>
+			</div>
 
 			<div id="side-nav" class="side-nav">
 				<nav id="left-nav">
-					<a data-menuanchor="section1" href="#section1" class="cbp-fbcurrent">Section 1</a>
-					<a data-menuanchor="section2" href="#section2">Section 2</a>
-					<a data-menuanchor="section3" href="#section3">Section 3</a>
-					<a data-menuanchor="section4" href="#section4">Section 4</a>
-					<a data-menuanchor="section5" href="#section5">Section 5</a>
-					<a data-menuanchor="section6" href="#section6">Section 6</a>
-					<a data-menuanchor="section7" href="#section7">Section 7</a>
-					<a data-menuanchor="section8" href="#section8">Section 8</a>
-
+					<a data-menuanchor="section1" href="#section1" class="cbp-fbcurrent"></a>
+					<a data-menuanchor="section2" href="#section2"></a>
+					<a data-menuanchor="section3" href="#section3"></a>
+					<a data-menuanchor="section4" href="#section4"></a>
+					<a data-menuanchor="section5" href="#section5"></a>
+					<a data-menuanchor="section6" href="#section6"></a>
+					<a data-menuanchor="section7" href="#section7"></a>
+					<a data-menuanchor="section8" href="#section8"></a>
 				</nav>
 			</div>
 
@@ -133,43 +146,61 @@
 
 				<section id="home" class="home section" data-anchor="section1">
 					<div class="home-nav">
-						<div class="bg-sec"></div>
 						<div class="home-back">
 							<img src="{% static 'images/clouds/view1back.svg' %}" class="svg" />
 						</div>
-						<!-- scroll on click with hash code -->
-						<div><a href="#section2" class="content-hidden" id="home-values">VALUES</a></div>
-						<div><a href="#section3" class="content-hidden" id="home-open">OPENINGS</a></div>
-						<div><a href="#section4" class="content-hidden" id="home-process">PROCESS</a></div>
+						<div><a href="#section2" id="home-values">VALUES</a></div>
+						<div><a href="#section3" id="home-open">OPENINGS</a></div>
+						<div><a href="#section4" id="home-process">PROCESS</a></div>
 					</div>
 				</section>
 
 				<section data-anchor="section2" id="openings" class="section">
 					<div class="gallery">
-						<div class="bg-sec"></div>
+
 						<div class="gal-items">
 							<div id="first" class="gal-item">
 								<img class="svg" src="{% static 'images/clouds/values1.svg' %}" />
 								<p>BUILD AI - STAY HUMAN</p>
+								<div class="mob-gallery-cont">
+									<h3>BUILD AI - STAY HUMAN</h3>
+									<p>First Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, fuga itaque commodi. Quidem facere totam perspiciatis voluptatibus harum obcaecati blanditiis itaque in quos libero architecto, ratione tempore necessitatibus alias quam.</p>
+								</div>
 							</div>
 							<div id="second" class="gal-item">
 								<img class="svg" src="{% static 'images/clouds/values2.svg' %}" />
 								<p>MOVE FAST - BE PERFECT</p>
+								<div class="mob-gallery-cont">
+									<h3>BUILD AI - STAY HUMAN</h3>
+									<p>First Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, fuga itaque commodi. Quidem facere totam perspiciatis voluptatibus harum obcaecati blanditiis itaque in quos libero architecto, ratione tempore necessitatibus alias quam.</p>
+								</div>
 							</div>
 							<div id="third" class="gal-item gal-center">
 								<img class="svg" src="{% static 'images/clouds/values3.svg' %}" />
 								<p>BE A PRO - LEARN EVERYTHING</p>
+								<div class="mob-gallery-cont">
+									<h3>BUILD AI - STAY HUMAN</h3>
+									<p>First Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, fuga itaque commodi. Quidem facere totam perspiciatis voluptatibus harum obcaecati blanditiis itaque in quos libero architecto, ratione tempore necessitatibus alias quam.</p>
+								</div>
 							</div>
 							<div id="fourth" class="gal-item">
 								<img class="svg" src="{% static 'images/clouds/values4.svg' %}" />
 								<p>HAVE FUN - MAKE BUSINESS</p>
+								<div class="mob-gallery-cont">
+									<h3>BUILD AI - STAY HUMAN</h3>
+									<p>First Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, fuga itaque commodi. Quidem facere totam perspiciatis voluptatibus harum obcaecati blanditiis itaque in quos libero architecto, ratione tempore necessitatibus alias quam.</p>
+								</div>
 							</div>
 							<div id="fifth" class="gal-item">
 								<img class="svg" src="{% static 'images/clouds/values5.svg' %}" />
 								<p>LOVE YOUR CUSTOMER</p>
+								<div class="mob-gallery-cont">
+									<h3>BUILD AI - STAY HUMAN</h3>
+									<p>First Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, fuga itaque commodi. Quidem facere totam perspiciatis voluptatibus harum obcaecati blanditiis itaque in quos libero architecto, ratione tempore necessitatibus alias quam.</p>
+								</div>
 							</div>
 						</div>
-						<div class="gal-content content-hidden">
+						<div class="gal-content">
 							<div class="gal-btn">
 								<button id="prev"><i class="left"></i></button>
 								<button id="next"><i class="right"></i></button>
@@ -197,10 +228,51 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="gal-nav">
+							<nav>
+								<a class="gal-link"></a>
+								<a class="gal-link"></a>
+								<a class="gal-link active-gal-link"></a>
+								<a class="gal-link"></a>
+								<a class="gal-link"></a>
+							</nav>
+						</div>
 					</div>
 				</section>
 
 				<section data-anchor="section3" id="values" class="values section">
+					<div class="mob-val-cont">
+						
+					  <div class="mob-val-inner">
+					  	{% for job in jobs %}
+					    <div class="mob-val-tab">
+					      <input id="tab-{{job.id}}" type="radio" checked name="tabs1">
+					      <label for="tab-{{job.id}}">{{ job.title }}</label>
+					      <i class="round-plus"></i>
+						  <div class="mob-val-text-info">
+								<h4>WE ARE LOOKING FOR:</h4>
+								<p>{{ job.looking_for|safe }}
+								</p>
+								<h4>YOUR RESPONSIBILITIES:</h4>
+								<p>{{ job.responsibilities|safe }}
+								</p>
+								<div class="val-text-jobs">
+									<div class="val-text-jobs-wrapper">
+										<img src="{% static 'images/clouds/jobs_logo.svg' %}" />
+										<h2>WE THINK</h2>
+										<p>that is a shame to boast about truisms: a great atmosphere, development opportunities or an attractive motivational package. Just come to us and see for yourself that we are cool...
+										</p>
+										<button type="button">APPLY NOW</button>
+									</div>
+								</div>
+						  </div>
+					    </div>
+					    {% endfor %}
+					  </div>
+
+					</div>
+					<div class="sec3-bg"></div>
 					<div class="val-content content-hidden">
 						<div class="val-inner">
 							<div class="butt butt-disable" id="val-but-up"><i class="up"></i></div>
@@ -235,10 +307,10 @@
 										<h2>{{ job.title }}</h2>
 										<div class="val-text-info" id="val-info">
 											<h4>WE ARE LOOKING FOR:</h4>
-											<p>{{ job.looking_for }}
+											<p>{{ job.looking_for|safe }}
 											</p>
 											<h4>YOUR RESPONSIBILITIES:</h4>
-											<p>{{ job.responsibilities }}
+											<p>{{ job.responsibilities|safe }}
 											</p>
 										</div>
 									</div>
@@ -246,7 +318,7 @@
 										<div class="val-text-jobs-wrapper">
 											<img src="{% static 'images/clouds/jobs_logo.svg' %}" />
 											<h2>WE THINK</h2>
-											<p>ID is 1;BI EXPLORER  What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+											<p>that is a shame to boast about truisms: a great atmosphere, development opportunities or an attractive motivational package. Just come to us and see for yourself that we are cool...
 											</p>
 											<button type="button">APPLY NOW</button>
 										</div>
@@ -260,15 +332,17 @@
 
 				<section data-anchor="section4" id="step1" class="section">
 					<div class="step1-cont">
-						<div class="bg-sec"></div>
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_1_font.svg' %}" />
-								<div class="step-desc content-hidden">
-									<h1 class="step-hidden">SELECT</h1>
-									<p>If you like our culture and one of our openings please talk to our bot.
+								<div class="step-desc">
+									<div class="step-anim">
+										<h2>SELECT</h2>
+										<span class="text__first-bg"></span>
+									</div>
+									<p class="step-hidden-delay">If you like our culture and one of our openings please talk to our bot.
 									</p>
-									<span>No boring forms to fill in.</span>
+									<span class="step-hidden-delay">No boring forms to fill in.</span>
 								</div>
 							</div>
 						</div>
@@ -281,7 +355,7 @@
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_2_font.svg' %}" />
-								<div class="step-desc content-hidden">
+								<div class="step-desc">
 									<div class="step-anim">
 										<h2>QUERY</h2>
 										<span class="text__first-bg"></span>
@@ -302,11 +376,14 @@
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_3_font.svg' %}" />
-								<div class="step-desc content-hidden">
-									<h1 class="step-hidden">QUERY</h1>
-									<p>If you like us and we like we will sign a waiver and you are all set to start an adventure at Clouds On Mars.
+								<div class="step-desc">
+									<div class="step-anim">
+										<h2>QUERY</h2>
+										<span class="text__first-bg"></span>
+									</div>
+									<p class="step-hidden-delay">If you like us and we like we will sign a waiver and you are all set to start an adventure at Clouds On Mars.
 									</p>
-									<span>No more dullness.</span>
+									<span class="step-hidden-delay">No more dullness.</span>
 								</div>
 							</div>
 						</div>
@@ -320,11 +397,14 @@
 						<div class="step1-inner step" id="step1-plx">
 							<div class="step1-desc-wrapper">
 								<img src="{% static 'images/clouds/step_4_font.svg' %}" />
-								<div class="step-desc content-hidden">
-									<h1 class="step-hidden">QUERY</h1>
-									<p>Interviews are scheduled for one day in a person in our office or via Skype. We will talk about like, technology and business. We may even write some code together. You will centainly meet your new very human manager.
+								<div class="step-desc">
+									<div class="step-anim">
+										<h2>QUERY</h2>
+										<span class="text__first-bg"></span>
+									</div>
+									<p class="step-hidden-delay">Interviews are scheduled for one day in a person in our office or via Skype. We will talk about like, technology and business. We may even write some code together. You will centainly meet your new very human manager.
 									</p>
-									<span>No more loneliness.</span>
+									<span class="step-hidden-delay">No more loneliness.</span>
 								</div>
 							</div>
 						</div>
@@ -332,28 +412,44 @@
 				</section>
 
 				<section data-anchor="section8" id="contact" class="section">
-					<div class="bg-sec"></div>
 					<div class="cont-content">
 						<div class="cont-par">
 							<div class="contact-us">
-								<h2 class="cont-z1">CONTACT US</h2>
-								<p class="cont-z1 content-hidden">Greate that you have passed by. Come more often! Follow us on Facebook and Linkendl - then you will get latest updates on our mission, the new searches for explorers and events we organize to celebrate with out fans.</p>
+								<h2 class="cont-z1 step-hidden-delay">CONTACT US</h2>
+								<p class="cont-z1 step-hidden-delay cont-sec-anim">Greate that you have passed by. Come more often! Follow us on Facebook and Linkendl - then you will get latest updates on our mission, the new searches for explorers and events we organize to celebrate with out fans.</p>
 								<div class="cont-info cont-z2">
-									<h2 >PL</h2>
-									<span>Clouds on Mars Sp.z o.o.</span>
+									<h2 class="cont-z1">PL</h2>
+									<span class="cont-z1">Clouds on Mars Sp.z o.o.</span>
+									<span class="text__cont-bg"></span>
 								</div>
-								<p class="cont-z2 content-hidden">Address: Zgoda 3/8, Warsaw</p>
-								<p class="cont-z2 content-hidden"><a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
-							</div>
-							<div class="follow-us">
-								<h2 class="cont-z1">FOLLOW US</h2>
-								<div class="cont-info-bottom cont-z2">
+								<p class="cont-z2 step-hidden-delay cont-third-anim">Address: Zgoda 3/8, Warsaw</p>
+								<p class="cont-z2 step-hidden-delay cont-third-anim"><a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
+								<div class="mob-cont-info">
 									<div class="cont-info">
 										<h2 class="cont-z1">US</h2>
 										<span class="cont-z1">Clouds on Mars Inc.</span>
 									</div>
-									<p class="cont-z2 content-hidden">Address: Zgoda 3/8, Warsaw</p>
-									<p class="cont-z2 content-hidden">Mail: <a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
+									<p class="cont-z2">Address: Zgoda 3/8, Warsaw</p>
+									<p class="cont-z2">Mail: <a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
+								</div>
+							</div>
+							<div class="follow-us">
+								<h2 class="cont-z1 step-hidden-delay">FOLLOW US</h2>
+								<div class="contact-social-links step-hidden-delay cont-z1 cont-sec-anim">
+									<div class="contact-social-links-inner">
+										<a href="##facebook"><img src="{% static 'images/clouds/facebook_basic.svg' %}" class="svg"/></a>
+										<a href="##instagram"><img src="{% static 'images/clouds/instagram_basic.svg' %}" class="svg" /></a>
+										<a href="##facebook"><img src="{% static 'images/clouds/linkedin_basic.svg' %}" class="svg" /></a>
+									</div>
+								</div>
+								<div class="cont-info-bottom cont-z2">
+									<div class="cont-info">
+										<h2 class="cont-z1">US</h2>
+										<span class="cont-z1">Clouds on Mars Inc.</span>
+										<span class="text__cont-bg"></span>
+									</div>
+									<p class="cont-z2 step-hidden-delay cont-third-anim">Address: Zgoda 3/8, Warsaw</p>
+									<p class="cont-z2 step-hidden-delay cont-third-anim">Mail: <a href="mailto: hermaszewski@cloudsonmars.com">hermaszewski@cloudsonmars.com</a></p>
 								</div>
 							</div>
 						</div>
@@ -364,502 +460,21 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<!-- imagesloaded for checking if all images have been loaded for preloaded screen animation -->
 		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-		<script>
-		</script>
-		<!-- script for img.svg and imagesLoaded -->
-		<script>
-			var left_planet, left_line;
-			$('#container').imagesLoaded( { background: true },
-				function() {
-			    setTimeout(function(){
-			    	$('body').removeClass('stop-scrolling');
-					$('body').addClass('loaded');
-					$( '#home' ).addClass('home-loaded');
-			    }, 3000);
-			    // timeout is need to keep function unintialized before all animations are done
-			  //   setTimeout(function(){
-					// $(function() {
-					// 	scrollLayout.init();
-					// });
-			  //   }, 900);
-
-
-		        jQuery('img.svg').each(function(){
-		            var $img = jQuery(this);
-		            var imgID = $img.attr('id');
-		            var imgClass = $img.attr('class');
-		            var imgURL = $img.attr('src');
-
-		            jQuery.get(imgURL, function(data) {
-		                // Get the SVG tag, ignore the rest
-		                var $svg = jQuery(data).find('svg');
-		                // Add replaced image's ID to the new SVG
-		                if(typeof imgID !== 'undefined') {
-		                    $svg = $svg.attr('id', imgID);
-		                }
-		                // Add replaced image's classes to the new SVG
-		                if(typeof imgClass !== 'undefined') {
-		                	// adding gal even class to make 2 and 4 element bigger
-							if (imgURL.indexOf("values2.svg") >= 0 || 
-								imgURL.indexOf("values4.svg") >= 0 ){
-			                    $svg = $svg.attr('class', imgClass+' replaced-svg gal-even');
-			                	console.log("images with values;")
-		                	} else {
-			                    $svg = $svg.attr('class', imgClass+' replaced-svg');
-		                	}
-		                }
-
-		                // Remove any invalid XML tags as per http://validator.w3.org
-		                $svg = $svg.removeAttr('xmlns:a');
-
-		                // Replace image with new SVG
-		                $img.replaceWith($svg);
-
-		                if(imgURL == '/static/images/clouds/view1back.svg') {
-							left_planet = $('circle#left_planet')
-							, left_line = $('circle#left_line')
-							var right_line = $('circle#right_line')
-							, small_planet = $('circle#small_planet')
-							, small_planet2 = $('circle#small_planet2')
-							, small_planet3 = $('circle#small_planet3')
-							, right_line2 = $('circle#right_line2')
-							, right_line3 = $('circle#right_line3');
-
-							//now call our Aimation at circle...
-							animateAtCircle(left_planet,left_line,50000, function(){console.log('finished');});
-							animateAtCircle(small_planet,right_line,15000, function(){console.log('finished');});
-							animateAtCircle(small_planet2,right_line2,20000, function(){console.log('finished');});
-							animateAtCircle(small_planet3,right_line3,35000, function(){console.log('finished');});
-		                }
-
-		            }, 'xml');
-
-		        });
-
-			});
-
-			function checkForHover() {
-				return ($('#home-process:hover').length === 1 ||
-					$('#home-values:hover').length === 1 ||
-					$('#home-open:hover').length === 1)
-			}
-
-			var animateAtCircle = function (elementToAnimate, circlePath, duration, callback){
-			  //I would see:
-			  var imagesPerSecond = 60;
-			  //and calculate the sum of steps i need:
-			  var sumSteps = duration / (1000/imagesPerSecond);
-			  //an circle has 360 degrees
-			  //so my stepwidth is:
-			  var stepWidth = 360 / sumSteps;
-			  //let us begin with step 1
-			  var step = 1;
-			  //before, i need a Variable to store my Timeout
-			  var pathAnim;
-
-			  var len = 0;
-			  var slowmo = 3;
-			  //and begin with our animation function
-			  var anim=function(){
-
-				if(checkForHover()) {
-					len += stepWidth/slowmo;
-					$('.home-back svg').css('opacity', '0.5');
-				} else {
-					len += stepWidth;
-					$('.home-back svg').css('opacity', '1');
-				}
-			    //rotate the circle relative
-			    //to the midpoint of circlePath
-			    elementToAnimate.attr("transform",`rotate(
-			      ${len},
-			      ${circlePath.attr('cx')},
-			      ${circlePath.attr('cy')}
-			      )`);
-
-			    //until step smaller then sumSteps
-			    if (true) {
-			      //set step to next step
-			      step ++
-			      //and wait for creating next rotation an call anim again...
-			      pathAnim = setTimeout(anim, 1000/imagesPerSecond);
-			    } else {
-			      //animation is finished;
-			      clearTimeout(pathAnim);
-			      //call callback function
-			      if (callback) return callback();
-			    }
-			  }
-			  //now call our anim loop function
-			  anim();
-			}
-
-			var sel;
-			$('.values ul > li').click(function() {
-				// console.log($(this).attr('id'));
-				// console.log($('.values .val-desc > #' + $(this).attr('id')));
-				sel = `div[id="${$(this).attr('id')}"]`;
-
-				$('.values .val-inner').css('transform', 'translateX(-200%)');
-				$(sel).css('transform', 'translate(0%, 0%)');
-			});
-
-			$('.values .return').click(function() {
-				$(sel).css('transform', 'translateX(+200%)')
-				$('.values .val-inner').css('transform', 'translateX(0%)');
-			});
-
-		</script>
 		<script src="{% static 'js/jquery.easing.min.js' %}"></script>
 		<script src="{% static 'js/waypoints.min.js' %}"></script>
 		<script src="{% static 'js/jquery.debouncedresize.js' %}"></script>
-
-		<!-- script for parallax with tweenMax -->
-		<script>
-			// why it doesn't work on firefox?
-			var text = $("#step1 .step-desc");
-			var span = $("#step1 .step-desc span");
-			var div1 = $('.bg1');
-			var div2 = $('.bg1-changed');
-
-			$(document).on("mousemove",function(e) {  
-			  var ax = ($(window).innerWidth()/2- e.pageX)/15;
-			  var ay = ($(window).innerHeight()/2- e.screenY)/15;
-			  var ztext = 10;
-			  var z = 0;
-
-			  TweenMax.to('.bg1', .9, {
-			    x: ax/2,
-			    y: ay/2,
-			  });
-			  // TweenMax.to('#step1-plx', 0.7, {transform:"rotateX("+(-ay/2)+"deg) rotateY("+(ax/2)+"deg)"});
-			  tweenParallax('.step', 0.7, -ay/2, ax/2);
-			  tweenParallax('.cont-par', 1, -ay/5, ax/5);
-			  // tweenParallax('.par', 0.7, ay, ax);
-			});
-
-			function tweenParallax(elem, time, ay, ax) {
-			  TweenMax.to(elem, time, {transform:"rotateX("+(ay)+"deg) rotateY("+(ax)+"deg)"});
-			}
-		</script>
-
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
-<!-- 		<script>
-			$(document).mousemove(function(e) {
-			  parallaxIt(e, ".bg1", -10);
-			  // parallaxIt(e, "img", -0);
-			});
-
-			function parallaxIt(e, target, movement) {
-			  var $this = $(document);
-			  // var relX = e.pageX - $this.offset().left;
-			  // var relY = e.pageY - $this.offset().top;
-			  console.log(100-($this.width() / 2) / $this.width() * movement);
-			  TweenMax.to(target, 1, {
-			    x: (100-$this.width() / 2) / $this.width() * movement,
-			    y: (100-$this.height() / 2) / $this.height() * movement
-			  });
-			}
-		</script> -->
 
 		<!--  script for full page settings -->
-		<script src="{% static 'js/fullPage.js-master/jquery.fullpage.js' %}"></script>
+		<!-- <script src="{% static 'js/fullPage.js-master/jquery.fullpage.js' %}"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="{% static 'js/slider.js' %}"></script>
+
 		<script>
-			$(document).ready(function() {
-
-				if($('.jobs-sections.job-sec-active').next()[0] == undefined)
-					$('.values .butt').addClass('butt-disable');
-
-				$('#fullpage').fullpage({
-					//Navigation
-					menu: '#left-nav',
-					easingcss3: 'cubic-bezier(1.000, -0.440, 0.265, 1.385)',
-					scrollingSpeed: 800,
-
-					afterLoad: function(anchorLink, index){
-						var loadedSection = $(this);
-						var imgClass = $('#bg1').attr('class');
-
-						var section = $('section')[index-1];
-						$(section).find('.content-hidden').addClass('content-visible').removeClass('content-hidden');
-						if(index == 5) {
-							var tl = new TimelineLite({delay: 0}),
-							tl1 = new TimelineLite({delay: .4}),
-							tl2 = new TimelineLite({delay: 0.8}),
-							firstBg = document.querySelectorAll('.text__first-bg'),
-							word  = document.querySelectorAll('.step-anim h2'),
-							p_tag = document.querySelectorAll('.step-desc p'),
-							span_tag = document.querySelectorAll('.step-desc span.step-hidden-delay');
-
-							tl
-							.to(firstBg, .3, {scaleX:1})
-							.to(word, .1, {opacity:1})  
-							.to(firstBg, .3, {scaleX:0});
-							
-
-							tl1
-							.to(p_tag, .3, {opacity:1});
-
-							tl2
-							.to(span_tag, .3, {opacity:1});
-						}
-
-						// controlling scroll down
-						if(index > 1 && index != 8) {
-							$("#scroll-down").addClass("scroll-dis");
-						} else if (index == 8) {
-							$("#scroll-down .scroll-down").css('display', 'none');
-							$("#scroll-down .scroll-up").css('display', 'block');
-							$("#scroll-down").removeClass("scroll-dis");
-						} else {
-							$("#scroll-down").removeClass("scroll-dis");
-							$("#scroll-down .scroll-down").css('display', 'block');
-							$("#scroll-down .scroll-up").css('display', 'none');
-						}
-
-						if(index == 3) {
-							setTimeout(function(){
-				                $('#bg-top').css('display', 'none');
-							}, 0); // change to 100
-
-			                if(typeof imgClass !== 'undefined') {
-			                    $('#bg1').attr('class', imgClass+' bg1-changed');
-			                }
-		                	// add class to style fixed section
-			                $("#container").addClass('value-active');
-			                $("body").css('background-color', "#ff5719");
-			                $(".menu-content").addClass('menu-change3sec');
-						}
-					},
-					onLeave: function(index, nextIndex, direction) {
-						if($('#val-info:hover').length === 1) {
-							return false;
-						}
-						var leavingSection = $(this);
-						var imgClass = $('#bg1').attr('class');
-
-						var section = $('section')[index-1];
-						$(section).find('.content-visible').addClass('content-hidden').removeClass('content-visible');
-						
-						$('.step-anim h2').css('opacity', '0');
-						// $('.step-desc p').css('opacity', '0'),
-						$('.step-desc .step-hidden-delay').css('opacity', '0');
-
-						//using index to change background styles for 3rd section
-						if(index == 3) {
-							// super efekt
-		                    $('#bg1').attr("class", "");
-			                $("body").css('background-color', "black");
-
-			                $("#container").removeClass('value-active');
-			                $(".menu-content").removeClass('menu-change3sec');
-
-							setTimeout(function(){
-				                $('#bg-top').css('display', 'block');
-							}, 100); // change to 100
-
-						}
-
-					}
-
-				});
-
-			});
-
-			// control buttons for openings
-			$('.values .butt').on('click', function() {
-				var button = $(this);
-				var activeSec = $('.jobs-sections.job-sec-active');
-				if (button.attr('id') == 'val-but-down') {
-					if(activeSec.next()[0]) {
-						activeSec.removeClass('job-sec-active');
-						activeSec.next().addClass('job-sec-active');
-					}
-					if($('.jobs-sections.job-sec-active').next()[0] == undefined)
-						button.addClass('butt-disable');
-					if($('.jobs-sections.job-sec-active').prev()[0])
-						$('#val-but-up').removeClass('butt-disable');
-				} else {
-					if(activeSec.prev()[0]) {
-						activeSec.removeClass('job-sec-active');
-						activeSec.prev().addClass('job-sec-active');
-					}
-					if($('.jobs-sections.job-sec-active').prev()[0] == undefined)
-						$('#val-but-up').addClass('butt-disable');
-					if($('.jobs-sections.job-sec-active').next()[0])
-						$('#val-but-down').removeClass('butt-disable');
-				}
-			});
-
-			$('#menu-button').click(function() {
-		    	$('body')[0].classList.toggle('stop-scrolling');
-				$(this).context.parentElement.classList.toggle("menu-clicked");
-			});
-
-			// for menu links
-			$('#menu-nav > a').on('click', function() {
-				console.log('what the fuck');
-		    	$('body')[0].classList.toggle('stop-scrolling');
-		    	$('.menu')[0].classList.toggle("menu-clicked");
-			});
-
-			$('#scroll-down .scroll-down').on('click',function() {
-				$.fn.fullpage.moveSectionDown();
-			});
-
-			$('#scroll-down .scroll-up').on('click',function() {
-				$.fn.fullpage.moveTo(1);
-			});
-
-			$('.top-logo').click(function() {
-				$.fn.fullpage.moveTo(1);
-			});
-
-
+			// console.log($('.val-text-info').height());
 		</script>
 
-		<!-- script for gallery -->
-		<script>
-		(function(){
-			var items = $('.gal-item');
-			var pos = [];
-			
-			// when loaded positions are calculated
-			var widthItems = $('.gal-items')[0].offsetWidth;
-			var widthItem = $('.gal-item')[2].offsetWidth;
-			var marginForFirst = (widthItems - (widthItems - (widthItems/5) + widthItem))/2;
-
-			items.css('left', function(index) {
-				// should include margins
-				var widthItems = $('.gal-items')[0].offsetWidth / 5;
-				var widthItem = $('.gal-item')[2].offsetWidth;
-				pos.push((index * widthItems) + marginForFirst);
-				return (pos[index]);
-			});
-
-
-			$($('.gal-item > p')[1]).css('display', 'block');
-			$($('.gal-item > p')[3]).css('display', 'block');
-
-			// place slider element before so can start from click prev
-			var slides = $('.slider');
-			slides.first().before(slides.last());
-
-			// on button press
-			$('.gal-btn > button').on('click', function() {
-				var items = $('.gal-item');
-				var trans_zero = 0;
-				var items = $('.gal-item');
-				// Register button
-				var button = $(this);
-				// Register active slide
-				var activeSlide = $('.gal-center');
-
-				slides = $('.slider');
-				var activeSlide = $('.activeSlide');
-
-				// Next function
-				if (button.attr('id') == 'next') {
-					var last_elem = $('.gal-item:eq(0)').clone(true);
-					items.last().after(last_elem);
-					items = $('.gal-item');
-					items.last().css('left', '+100%');
-
-					// Move first slide to the end so the user can keep going forward
-					for(var i = 0; i < 5; i++) {
-						if(i == 0) {
-							items.first().css('left', '-100%');
-						} else if(i == 2) {
-							$(items[i]).css('left', pos[i-1]);
-							$(items[i]).removeClass('gal-center');
-						} else if (i == 3) {
-							$(items[i]).css('left', pos[i-1]);
-							$(items[i]).addClass('gal-center');
-						} else {
-							$(items[i]).css('left', pos[i-1]);
-						}
-						$($(items[i]).context.childNodes[3]).css('display', 'none');
-						$($($('.gal-item > svg')[i])[0]).context.classList.remove('gal-even');
-					}
-					setTimeout(function(){
-						// last element with timeout to add transition
-						$(items[i]).css('left', pos[i-1]);
-						items.first().remove();
-					}, 50); // change to 100
-
-					slides.last().after(slides.first());
-					// Move active class to the right
-					activeSlide.removeClass('activeSlide').next('.slider').addClass('activeSlide');
-
-					// after clicking add text under svg only after 2 and 4
-					$($(items[2]).context.childNodes[3]).css('display', 'block');
-					$($(items[4]).context.childNodes[3]).css('display', 'block');
-
-					// the same with colors
-					$($($('.gal-item > svg')[2])[0]).context.classList.add('gal-even');
-					$($($('.gal-item > svg')[4])[0]).context.classList.add('gal-even');
-
-				} else if(button.attr('id') == 'prev') {
-					var first_elem = $('.gal-item:eq(4)').clone(true);
-					items.first().before(first_elem);
-					first_elem.css('left', '-10%');
-					items = $('.gal-item');
-					// Move first slide to the end so the user can keep going forward
-					for(var i = 5; i > 0; i--) {
-						if(i == 5) {
-							items.last().css('left', '+100%');
-						} else if(i == 2) {
-							$(items[i]).css('left', pos[i]);
-							$(items[i]).addClass('gal-center');
-						} else if(i == 3) {
-							$(items[i]).css('left', pos[i]);
-							$(items[i]).removeClass('gal-center');
-						} else {
-							$(items[i]).css('left', pos[i]);
-						}
-						$($(items[i]).context.childNodes[3]).css('display', 'none');
-						$($($('.gal-item > svg')[i])[0]).context.classList.remove('gal-even');
-					}
-					setTimeout(function(){
-						$(items[0]).css('left', pos[0]);
-						items.last().remove();
-					}, 50);
-
-				    slides.first().before(slides.last());
-					activeSlide.removeClass('activeSlide').prev('.slider').addClass('activeSlide');
-				    // Move active class to the left
-
-					// after clicking add text under svg only after 2 and 4
-					$($(items[1]).context.childNodes[3]).css('display', 'block');
-					$($(items[3]).context.childNodes[3]).css('display', 'block');
-
-					// the same with colors
-					$($($('.gal-item > svg')[1])[0]).context.classList.add('gal-even');
-					$($($('.gal-item > svg')[3])[0]).context.classList.add('gal-even');
-				}
-
-			});
-
-			// recalc on resize
-			$( window ).resize(function() {
-				var widthItems = $('.gal-items')[0].offsetWidth;
-				var widthItem = $('.gal-item')[2].offsetWidth;
-				var marginForFirst = (widthItems - (widthItems - (widthItems/5) + widthItem))/2;
-				items = $('.gal-item');
-				items.css('left', function(index) {
-					widthItems = $('.gal-items')[0].offsetWidth / 5;
-					widthItem = $('.gal-item')[2].offsetWidth;
-					// pos.push((index * widthItems) + marginForFirst);
-					pos[index] = (index * widthItems) + marginForFirst;
-					return (pos[index]);
-				});
-				console.log(pos);
-			});
-
-		})();
-                                
-		</script>
 	</body>
 </html>

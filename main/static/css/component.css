@@ -31,12 +31,10 @@ html, body,
 .side-bar,
 .sections,
 .sections section { 
-	height: 100% !important;
-	/*border: 1px solid blue;*/
+	/*height: 100% !important;*/
+	height: 100%;
 }
 
-/* The nav is fixed on the right side  and we center it by translating it 50% 
-(we don't know it's height so we can't use the negative margin trick) */
 .side-nav > nav {
 	position: fixed;
 	z-index: 9999;
@@ -73,6 +71,7 @@ html, body,
 
 .side-nav > nav a.active {
 	background: #ff5719;
+	border: 1px solid #ff5719;
 }
 
 .value-active .side-nav > nav a {

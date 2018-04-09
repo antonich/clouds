@@ -16,5 +16,4 @@ class HomePageView(View):
             if(count == (num*5)):
                 jobs_list.append([])
                 num += 1
-
         return render(request, self.template_name, {'jobs_list': jobs_list, 'jobs':jobs})

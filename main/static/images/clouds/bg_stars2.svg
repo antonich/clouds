@@ -6,7 +6,7 @@
     /* <![CDATA[ */
     svg {
     	background-color: #ff5719;
-    	opacity: 0.4;
+    	opacity: .4;
     }
     circle {
       fill: white;

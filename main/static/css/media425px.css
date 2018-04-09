@@ -1,3 +1,646 @@
-@media screen only and (max-width: 425px) {
-    
+@media only screen and (max-width: 425px) {
+
+html, body, 
+.container,
+.side-bar,
+.sections,
+.sections section { 
+    height: 100%;
+}
+
+body, html {
+    background-color: black;
+}
+
+.sections section {
+/*    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../images/clouds/bg_stars.svg');
+    background-size: cover;*/
+}
+
+#prlx-scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.bg1, .bg2, .bg3, .bg1-changed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg1 {
+    /*display: none;*/
+    background-color: black;
+}
+
+.bg1 svg {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.value-active section {
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../images/clouds/bg_stars1.svg');
+    background-size: cover;
+}
+
+.bg {
+    display: none;
+}
+
+.side-nav {
+    display: none;
+}
+
+.top-line,
+.bottom-line {
+    display: block;
+    background-color: black;
+    opacity: 0.6;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.bottom-line {
+    bottom: 0;
+    top: auto;
+}
+
+.top-logo {
+    top: 10px;
+    z-index: 1000;
+    left: 20px;
+    right: auto;
+    transform: none;
+}
+
+.top-logo svg {
+    width: 130px;
+    height: 70px;
+}
+
+.bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+}
+
+.bot svg {
+    width: 50px;
+    height: 50px;
+}
+
+.bot-chat {
+    z-index: 50000;
+    height: 100%;
+    width: 100%;
+}
+
+.social-links {
+    bottom: 10px;
+    position: fixed;
+    top: auto;
+    left: 3%;
+    width: 120px;
+    height: 40px;
+}
+
+.social-links .social-links-inner p {
+    display: none;
+}
+
+.social-links .social-links-inner svg {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 3px;
+}
+
+.copyrights {
+    display: none;
+}
+
+.scroll-down-img {
+    display: none;
+}
+
+.menu .menu-button {
+    top: 30px;
+    right: 20px;
+    left: auto;
+}
+
+.menu .menu-button .menu-bar1, 
+.menu .menu-button .menu-bar2, 
+.menu .menu-button .menu-bar3 {
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+}
+
+
+.menu-content .menu-nav a {
+    font-size: 30px;
+    padding: 7px 0;
+    width: 100%;
+}
+
+
+.menu-clicked .menu-bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.menu-clicked .menu-bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-6px, -7px);
+}
+
+.content-hidden {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========= HOME ================================ */
+
+#view1back g:not(.mob-circles) {
+    display: none;
+}
+
+#view1back .mob-circles {
+    display: block !important;
+}
+
+.home-nav .social-links {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+}
+
+.home-back svg {
+    width: 600px;
+    height: 800px;
+}
+
+.home .home-nav .home-back ~ div {
+    width: 90%;
+    opacity: 1;
+}
+
+.home-nav a {
+    font-size: 1em;
+}
+
+.home-nav div a:hover {
+    color: white;
+    font-size: 1em;
+}
+
+/*.home .home-nav .social-links-menu {
+    bottom: 10px;
+    top: auto;
+    left: 3%;
+    width: 120px;
+    height: 40px;
+    position: absolute !important;
+    margin: 0;
+    display: block;
+}
+
+.home .home-nav .social-links-menu .social-links-menu-inner p {
+    display: none;
+}
+
+.home .home-nav .social-links-menu .social-links-menu-inner svg {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0 3px;
+}*/
+
+/* ========= GALLERY ================================ */
+
+.gallery {
+    position: relative;
+    display: block;
+    padding-bottom: 1em;
+}
+
+.gallery .gal-items {
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-top: 0;
+    justify-content: none;
+}
+
+.gal-items div.gal-item {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.gallery svg {
+    width: 100%;
+    height: 30%;
+    fill: #ff5719;
+    margin: 2em 0;
+    margin-bottom: .3em;
+}
+
+.gal-center svg {
+    transition: none;
+    width: 100%;
+    height: 30%;
+}
+
+.gallery svg .st0 {
+    fill: #ff5719;
+}
+
+.gal-center svg .st0 {
+    fill: #ff5719;
+}
+
+.gal-even .st0 {
+    fill: #ff5719;
+}
+
+.gal-even {
+    width: 100% !important;
+    height: 30% !important;
+}
+
+.gal-content {
+    display: none;
+}
+
+.mob-gallery-cont {
+    display: block;
+    position: relative;
+}
+
+.mob-gallery-cont > p {
+    display: block !important;
+    font-size: 14px;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+}
+
+.mob-gallery-cont h3 {
+    color: #ff5719;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+    width: 100%;
+}
+
+.flickity-button {
+  display: none;
+}
+
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 100px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+    background: #ff5719;
+    border: 2px solid #ff5719;
+}
+
+
+/* ========= VALUES ================================ */
+
+#values {
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('../images/clouds/bg_stars1.svg');
+    background-size: cover;
+    padding: 1em;
+    height: auto !important; 
+}
+
+#values .sec3-bg {
+    display: none;
+}
+
+.value-active #values .sec3-bg {
+    display: none;
+}
+
+#values .fp-tableCell {
+    height: auto !important;
+}
+
+.values .val-inner,
+.values .val-desc {
+    display: none;
+}
+
+#values .mob-val-cont {
+    padding-top: 50px;
+    display: block;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    height: 100%;
+    max-height: 1000em;
+}
+
+.mob-val-tab {
+    position: relative;
+    height: 100%;
+    max-height: 1000em;
+}
+
+.mob-val-cont input {
+    z-index: -1;
+    position: absolute;
+}
+
+.mob-val-cont label {
+  position: relative;
+  display: block;
+  padding: 13px 10px;
+  padding-right: 40px;
+  background: transparent;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.mob-val-cont i:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    background-color: black;
+    color: black;
+    height: 2px;
+    width: 15px;
+}
+
+.mob-val-cont i:after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: black;
+    width: 2px;
+    height: 15px;
+}
+
+.mob-val-cont i.round-plus {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: black;
+}
+
+.mob-val-cont .mob-val-text-info {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0s;
+  -o-transition: max-height 0s;
+  transition: max-height 0s;
+  padding: 0 1em;
+  padding-bottom: 1em;
+}
+
+.mob-val-cont .mob-val-text-info * {
+    color: white;
+}
+
+
+.mob-val-text-info > h4 {
+    margin: 1em 0;
+}
+
+
+/* :checked */
+.mob-val-cont input:checked ~ .mob-val-text-info {
+  max-height: 1000em;
+}
+
+.mob-val-cont input:checked ~ i.round-plus {
+    border-color: white;
+    color: white;
+}
+
+.mob-val-cont input:checked ~ label {
+    color: white;
+}
+
+.mob-val-cont input:checked ~ i:after {
+    display: none;
+}
+
+.mob-val-cont input:checked ~ i:before {
+    background-color: white;
+}
+
+
+
+/* ========= STEPY ================================ */
+
+#step1,
+#step2,
+#step3,
+#step4,
+#step1 .fp-tableCell,
+#step2 .fp-tableCell,
+#step3 .fp-tableCell,
+#step4 .fp-tableCell {
+    height: auto !important;
+}
+
+.step1-cont {
+    display: block;
+    transform-style: flat;
+}
+
+.step1-cont .step1-inner {
+    width: 300px;
+    position: relative;
+    transform: none;
+    margin: auto;
+    transform-style: flat;
+    transform: none;
+}
+
+.step1-desc-wrapper {
+    height: 400px;
+    padding: 0 1em;
+    position: relative;
+    width: 100%;
+    transform: none;
+    transform-style: flat;
+    left: auto;
+    top: auto;
+    margin: auto;
+}
+
+#step2 .step1-desc-wrapper {
+    min-height: 400px;
+}
+
+#step3 .step1-desc-wrapper,
+#step4 .step1-desc-wrapper {
+    height: 300px;
+}
+
+.step1-desc-wrapper img {
+    width: 100%;
+    height: 200px;
+    margin-top: 80px;
+}
+
+#step2 .step1-desc-wrapper img,
+#step3 .step1-desc-wrapper img,
+#step4 .step1-desc-wrapper img {
+    margin-top: 0px; 
+}
+
+.step1-inner .step-desc {
+    position: absolute;
+    top: 220px;
+    left: 0;
+    display: block;
+    transform: none;
+    width: 100%;
+    padding: 0 1em;
+}
+
+#step2 .step1-inner .step-desc,
+#step3 .step1-inner .step-desc,
+#step4 .step1-inner .step-desc {
+    top: 133px;
+}
+
+.step-desc .step-anim {
+    transform: none;
+}
+
+.step-desc > h1 {
+    letter-spacing: 0px;
+    font-size: 1.5em;
+    transform: none;
+    position: relative;
+    font-weight: 500;
+}
+
+.step-desc p {
+    padding: 0;
+    font-size: 12px;
+    width: 100%;
+    transform: none;
+}
+
+.step-desc span {
+    font-size: 16px;
+    text-align: right;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    color: #ff5719;
+}
+
+.content-hidden {
+    opacity: 1;
+    visibility: visible;
+}
+
+.step-hidden-delay {
+    opacity: 1;
+}
+
+.step-desc h2 {
+    font-size: 1.5em;
+    opacity: 1;
+    letter-spacing: 0px;
+    font-size: 1.5em;
+    transform: none;
+    position: relative;
+    font-weight: 500;
+}
+
+/* ========= CONTACT PAGE ================================ */
+
+#contact .cont-content {
+    width: 80%;
+    margin: auto;
+}
+
+.cont-content div > .cont-info {
+    opacity: 1;
+}
+
+.cont-info span,
+.cont-info h2 {
+    opacity: 1;
+}
+
+
+.cont-content .cont-par {
+    transform: none;
+}
+
+.cont-content > div {
+    transform-style: flat;
+}
+
+.cont-content p {
+    width: 90%;
+}
+
+.mob-cont-info {
+    display: block;
+}
+
+.cont-par .follow-us {
+    display: none;
+}
+
+
 }
