@@ -240,6 +240,10 @@ body, html {
     padding-bottom: 1em;
 }
 
+.gallery .gal-nav {
+    display: none;
+}
+
 .gallery .gal-items {
     height: 100%;
     width: 100%;
@@ -252,6 +256,7 @@ body, html {
     width: 100%;
     height: 100%;
     padding-top: 50px;
+    padding-bottom: 1em;
 }
 
 .gallery svg {
@@ -316,7 +321,7 @@ body, html {
 
 /* position dots in carousel */
 .flickity-page-dots {
-  bottom: 100px;
+  bottom: 0px;
 }
 /* white circles */
 .flickity-page-dots .dot {
@@ -330,6 +335,17 @@ body, html {
 .flickity-page-dots .dot.is-selected {
     background: #ff5719;
     border: 2px solid #ff5719;
+}
+
+@media only screen and (max-width: 340px) {
+    .gal-items div.gal-item {
+        padding-top: 0px;
+    }
+
+    .gallery svg {
+        margin: 0;
+        margin-bottom: .3em;
+    }
 }
 
 
@@ -393,6 +409,7 @@ body, html {
   color: black;
   text-transform: uppercase;
   width: 100%;
+  z-index: 100;
 }
 
 .mob-val-cont i:before {
@@ -436,6 +453,7 @@ body, html {
     border: 1px solid black;
     border-radius: 50%;
     color: black;
+    z-index: 1;
 }
 
 .mob-val-cont .mob-val-text-info {
@@ -446,6 +464,10 @@ body, html {
   transition: max-height 0s;
   padding: 0 1em;
   padding-bottom: 1em;
+}
+
+.mob-val-text-info .val-text-jobs {
+    margin-top: 2em;
 }
 
 .mob-val-cont .mob-val-text-info * {
@@ -610,7 +632,23 @@ body, html {
 #contact .cont-content {
     width: 80%;
     margin: auto;
+    top: 40%;
+    height: 100%;
+    /*align-items: flex-start;*/
+    top: 50%;
+    transform: translate(-50%, -55%);
 }
+
+.cont-content .contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-content .cont-info h2.cont-z1 {
+    margin: 0;
+} 
+
 
 .cont-content div > .cont-info {
     opacity: 1;
@@ -620,6 +658,10 @@ body, html {
 .cont-info h2 {
     opacity: 1;
 }
+
+/*.cont-content div > div {
+    width: auto;
+}*/
 
 
 .cont-content .cont-par {
@@ -636,10 +678,23 @@ body, html {
 
 .mob-cont-info {
     display: block;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cont-par .follow-us {
     display: none;
+}
+
+.cont-content .cont-z2 {
+    width: 90%;
+}
+
+.cont-content div > .cont-info {
+    margin: .7em 0;
+    width: 90%;
 }
 
 

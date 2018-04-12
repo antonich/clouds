@@ -1,13 +1,18 @@
 var planetStatus = 0;
 
+$('#container').imagesLoaded( { background: '.bg' }, function() {
+  console.log('all .bg background images loaded');
+});
+
 $('#container').imagesLoaded( { background: true }, function() {
+    console.log('images Loaded and set time out');
     setTimeout(function(){
         $('body').removeClass('stop-scrolling');
         $('body').addClass('loaded');
         $( '#home' ).addClass('home-loaded');
-    }, 0);
+    }, 3000);
+    console.log('after time out');
     
-
     function setPlanetOpacity0() {
         var tl = new TimelineLite({delay: .3}),
         planets = document.querySelectorAll('.home-back svg .planet-opacity');
@@ -19,7 +24,8 @@ $('#container').imagesLoaded( { background: true }, function() {
             .to(planets, 0.3, {opacity: 1});
         }
     }
-
+    
+    console.log('before for each img svg');
     jQuery('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -49,7 +55,7 @@ $('#container').imagesLoaded( { background: true }, function() {
 
             // Replace image with new SVG
             $img.replaceWith($svg);
-            if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) || window.width > 500 ) {
+            if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) || document.documentElement.clientWidth > 500 ) {
                 if(imgURL == '/static/images/clouds/view1back.svg') {
                     var left_planet = $('circle#left_planet')
                     , left_line = $('circle#left_line')
@@ -113,8 +119,7 @@ function checkForHover() {
         $('#home-open:hover').length === 1)
 }
 
-console.log('before animate circle');
-
+console.log('before circle animation');
 var animateAtCircle = function (elementToAnimate, circlePath, duration, callback){
   //I would see:
   var imagesPerSecond = 60;
@@ -186,13 +191,12 @@ if($('.jobs-sections.job-sec-active').next()[0] == undefined)
 
 
 // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || document.documentElement.clientWidth < 500 ) {
-if(document.documentElement.clientWidth < 500) { 
+if(document.documentElement.clientWidth < 500) {
     $('.gal-items').flickity({
       // options
       cellAlign: 'left',
       contain: true
     });
-    console.log('chromefix');
     var vhFix = new VHChromeFix([
       {
         selector: '.sections section',
@@ -209,11 +213,21 @@ if(document.documentElement.clientWidth < 500) {
       {
         selector: '#prlx-scene',
         vh: 100
+      },
+      {
+        selector: '.bot-chat',
+        vh: 100
       }
     ]);
 
     $('#fullpage').fullpage({
         autoScrolling: false,
+        afterLoad: function(anchorLink, index) {
+            if(index == 1) showBotMessage(1);
+            else if(index==3) showBotMessage(2);
+            else if(index==8) showBotMessage(3);
+            else hideBotMessage();
+        }
 
     });
 
@@ -225,10 +239,18 @@ if(document.documentElement.clientWidth < 500) {
 
 }
 
+function hideBotMessage() {
+    $('.visible-bot').removeClass('visible-bot');
+}
+
+function showBotMessage(index) {
+    $('.bot .bot-ths div').eq(index-1).addClass('visible-bot');
+}
+
 
 
 $(document).ready(function() {
-    console.log('new document width ', document.documentElement.clientWidth);
+    console.log('when document is ready');
     if(document.documentElement.clientWidth > 500 ) {
         $('#fullpage').fullpage({
             //Navigation
@@ -261,6 +283,11 @@ $(document).ready(function() {
                     $("#scroll-down .scroll-up").css('display', 'none');
                 }
 
+                if(index == 1) showBotMessage(1);
+                else if(index==3) showBotMessage(2);
+                else if(index==8) showBotMessage(3);
+                else hideBotMessage();
+
                 if(index==8) disableSocial();
                 else addSocial();
 
@@ -288,9 +315,6 @@ $(document).ready(function() {
                 var section = $('section')[index-1];
                 $(section).find('.content-visible').addClass('content-hidden').removeClass('content-visible');
                 
-                // $('.step-anim h2').css('opacity', '0');
-                // $('.step-desc p').css('opacity', '0'),
-                // $('.step-desc .step-hidden-delay').css('opacity', '0');
 
                 //using index to change background styles for 3rd section
                 if(index == 3) {
@@ -317,12 +341,13 @@ $(document).ready(function() {
                     showDownGallery();
                 }
 
+                hideBotMessage();
+
             }
 
         });
 
         function disableSocial() {
-            console.log('siema this is antonich');
             $('.social-links').addClass('disable-social');
         }
 
@@ -530,18 +555,23 @@ $(document).ready(function() {
 
 if(document.documentElement.clientWidth > 500 ) {
     (function(){
-        console.log('self function');
+        console.log('self calling function');
+        // counter for nav
+        var countNav = 0;
+        var elemLength = 5;
+
+        // start setup
         var items = $('.gal-item');
         var pos = [];
         
         // when loaded positions are calculated
         var widthItems = $('.gal-items')[0].offsetWidth;
         var widthItem = $('.gal-item')[2].offsetWidth;
-        var marginForFirst = (widthItems - (widthItems - (widthItems/5) + widthItem))/2;
+        var marginForFirst = (widthItems - (widthItems - (widthItems/elemLength) + widthItem))/2;
 
         items.css('left', function(index) {
             // should include margins
-            var widthItems = $('.gal-items')[0].offsetWidth / 5;
+            var widthItems = $('.gal-items')[0].offsetWidth / elemLength;
             var widthItem = $('.gal-item')[2].offsetWidth;
             pos.push((index * widthItems) + marginForFirst);
             return (pos[index]);
@@ -558,22 +588,26 @@ if(document.documentElement.clientWidth > 500 ) {
         // on button press
         $('.gal-btn > button').on('click', function() {
             var items = $('.gal-item');
-            var trans_zero = 0;
-            var items = $('.gal-item');
+            // var trans_zero = 0;
+            // var items = $('.gal-item');
             // Register button
             var button = $(this);
             // Register active slide
-            var activeSlide = $('.gal-center');
+            // var activeSlide = $('.gal-center');
 
-            slides = $('.slider');
+            var slides = $('.slider');
             var activeSlide = $('.activeSlide');
 
             // Next function
             if (button.attr('id') == 'next') {
+
                 var last_elem = $('.gal-item:eq(0)').clone(true);
                 items.last().after(last_elem);
                 items = $('.gal-item');
                 items.last().css('left', '+100%');
+
+                if(countNav+1 > 4) countNav = 0;
+                else countNav += 1;
 
                 // Move first slide to the end so the user can keep going forward
                 for(var i = 0; i < 5; i++) {
@@ -592,7 +626,6 @@ if(document.documentElement.clientWidth > 500 ) {
                     $($($('.gal-item > svg')[i])[0]).context.classList.remove('gal-even');
                 }
                 setTimeout(function(){
-                    // last element with timeout to add transition
                     $(items[i]).css('left', pos[i-1]);
                     items.first().remove();
                 }, 50); // change to 100
@@ -609,11 +642,20 @@ if(document.documentElement.clientWidth > 500 ) {
                 $($($('.gal-item > svg')[2])[0]).context.classList.add('gal-even');
                 $($($('.gal-item > svg')[4])[0]).context.classList.add('gal-even');
 
+                // change gallery nav
+                $('a.active-gal-link').removeClass('active-gal-link');
+                $('.gal-nav a').eq( countNav ).addClass('active-gal-link');
+
+
             } else if(button.attr('id') == 'prev') {
                 var first_elem = $('.gal-item:eq(4)').clone(true);
                 items.first().before(first_elem);
                 first_elem.css('left', '-10%');
                 items = $('.gal-item');
+
+                if(countNav-1 < 0) countNav = elemLength-1;
+                else countNav -= 1;
+
                 // Move first slide to the end so the user can keep going forward
                 for(var i = 5; i > 0; i--) {
                     if(i == 5) {
@@ -646,6 +688,10 @@ if(document.documentElement.clientWidth > 500 ) {
                 // the same with colors
                 $($($('.gal-item > svg')[1])[0]).context.classList.add('gal-even');
                 $($($('.gal-item > svg')[3])[0]).context.classList.add('gal-even');
+
+                $('a.active-gal-link').removeClass('active-gal-link');
+                $('.gal-nav a').eq( countNav ).addClass('active-gal-link');
+
             }
 
         });
@@ -664,6 +710,73 @@ if(document.documentElement.clientWidth > 500 ) {
                 return (pos[index]);
             });
         });
+
+        $('.gal-nav a').click(function() {
+            var activeNav = $('a.active-gal-link').removeClass('active-gal-link').index();
+            $(this).addClass('active-gal-link').index();
+            countNav = $(this).index();
+
+            // add not transition to items
+            $('.gal-items > div.gal-item').addClass('gal-notrans');
+            $('.gal-content .slider').addClass('gal-notrans');
+
+            var items = $('.gal-item');
+            var index;
+
+            if(activeNav <= countNav) index = countNav-activeNav;
+            else index = 5 - activeNav + countNav;
+
+            for(var j = 0; j<index; j++) {
+
+                var slides = $('.slider');
+                var activeSlide = $('.activeSlide');
+                var last_elem = $('.gal-item:eq(0)').clone(true);
+                items.last().after(last_elem);
+                items = $('.gal-item');
+                items.last().css('left', '+100%');
+
+                // Move first slide to the end so the user can keep going forward
+                for(var i = 0; i < 5; i++) {
+                    if(i == 0) {
+                        items.first().css('left', '-100%');
+                    } else if(i == 2) {
+                        $(items[i]).css('left', pos[i-1]);
+                        $(items[i]).removeClass('gal-center');
+                    } else if (i == 3) {
+                        $(items[i]).css('left', pos[i-1]);
+                        $(items[i]).addClass('gal-center');
+                    } else {
+                        $(items[i]).css('left', pos[i-1]);
+                    }
+                    $($(items[i]).context.childNodes[3]).css('display', 'none');
+                    $($($('.gal-item > svg')[i])[0]).context.classList.remove('gal-even');
+                }
+                items.first().remove();
+
+                $(items[i]).css('left', pos[i-1]);
+
+                slides.last().after(slides.first());
+                // Move active class to the right
+                activeSlide.removeClass('activeSlide').next('.slider').addClass('activeSlide');
+
+                // after clicking add text under svg only after 2 and 4
+                $($(items[2]).context.childNodes[3]).css('display', 'block');
+                $($(items[4]).context.childNodes[3]).css('display', 'block');
+
+                // the same with colors
+                $($($('.gal-item > svg')[1])[0]).context.classList.add('gal-even');
+                $($($('.gal-item > svg')[3])[0]).context.classList.add('gal-even');
+
+            }
+
+            setTimeout(function(){
+                $('.gal-items > div.gal-item').removeClass('gal-notrans');
+                $('.gal-content .slider').removeClass('gal-notrans');
+            }, 50);
+
+
+        });
+        
 
     })();
 }
